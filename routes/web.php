@@ -33,6 +33,6 @@ Route::get('/news', function () {
     return view('app.news.index');
 })->name('news');
 
-Route::get('/contact', function () {
-    return view('app.contact.index');
-})->name('contact');
+Route::get('/about', function () {
+    return view('app.about.index');
+})->name('about');

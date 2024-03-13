@@ -8,7 +8,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('training') }}">Mon parcours</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('skills') }}">Compétences</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('news') }}">Veille Technologique</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">A propos</a></li>
             </ul>
         </div>
     </div>

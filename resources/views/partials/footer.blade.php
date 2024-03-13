@@ -7,7 +7,7 @@
                 <span class="mx-1">&middot;</span>
                 <a class="small" href="#!">Terms</a>
                 <span class="mx-1">&middot;</span>
-                <a class="small" href="{{ route('contact') }}">Contact</a>
+                <a class="small" href="{{ route('about') }}">A propos</a>
             </div>
         </div>
     </div>
