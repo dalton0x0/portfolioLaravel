@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\App\AppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('app.home.index');
-})->name('home');
-
-Route::get('/projects', function () {
-    return view('app.projects.index');
-})->name('projects');
-
-Route::get('/training', function () {
-    return view('app.training.index');
-})->name('training');
-
-Route::get('/skills', function () {
-    return view('app.skills.index');
-})->name('skills');
-
-Route::get('/news', function () {
-    return view('app.news.index');
-})->name('news');
-
-Route::get('/about', function () {
-    return view('app.about.index');
-})->name('about');
+Route::get('/', [AppController::class, 'home'])->name('home');
+Route::get('/projects', [AppController::class, 'projects'])->name('projects');
+Route::get('/training', [AppController::class, 'training'])->name('training');
+Route::get('/skills', [AppController::class, 'skills'])->name('skills');
+Route::get('/news', [AppController::class, 'news'])->name('news');
+Route::get('/about', [AppController::class, 'about'])->name('about');
+Route::post('/about', [AppController::class, 'contact'])->name('contact');

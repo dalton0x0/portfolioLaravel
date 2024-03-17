@@ -13,6 +13,11 @@
                 <section>
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
+                        <!-- Mon CV -->
+                        <a class="btn btn-primary px-4 py-3" href="{{ asset('storage/assets/cv-cheridanh-tsiela.pdf') }}" target="_blank">
+                            <div class="d-inline-block bi bi-download me-2"></div>
+                            Télécharger mon CV
+                        </a>
                     </div>
                     <!-- Contenu d'une expérience -->
                     <div class="card shadow border-0 rounded-4 mb-5">

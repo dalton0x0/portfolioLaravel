@@ -4,10 +4,11 @@
 
 @section('content')
     <!-- A propos -->
-    <section class="bg-light py-5">
+    <section class="bg-light">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xxl-8">
+                    @include('partials.flash')
                     <div class="text-center my-5">
                         <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Chéridanh</span></h2>
                         <p class="lead fw-light mb-4">Administrateur Système & Réseau Junior</p>
@@ -17,8 +18,7 @@
                         </p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
                             <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" href="#!"><i class="bi bi-discord"></i></a>
-                            <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                            <a class="text-gradient" target="_blank" href="https://github.com/cheridanh"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -36,39 +36,16 @@
                 </div>
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Nom complet</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Un nom est requis</div>
+                        <form action="{{ route('contact') }}" method="post">
+                            @csrf
+                            @include('partials.input', ['name' => 'name', 'label' => 'Nom complet', 'placeholder' => 'Entrer votre nom'])
+                            @include('partials.input', ['name' => 'email', 'label' => 'Email', 'placeholder' => 'Entrer votre adresse email'])
+                            @include('partials.input', ['type' => 'textarea','name' => 'message', 'label' => 'Message', 'placeholder' => 'Entrer votre message'])
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-lg" type="submit">
+                                    Envoyer
+                                </button>
                             </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Un adresse mail est requis</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">L'addresse mail est incorrecte</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Un message est requis</div>
-                            </div>
-                            <!-- Flash succès -->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Message envoé</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Flash erreur -->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erreur d'envoie</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Envoyer</button></div>
                         </form>
                     </div>
                 </div>
