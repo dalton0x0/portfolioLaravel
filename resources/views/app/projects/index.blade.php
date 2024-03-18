@@ -1,6 +1,6 @@
 @extends('layout.app.base')
 
-@section('title', 'Mes projets')
+@section('title', 'Mes expériences professionnelles')
 
 @section('content')
     <!-- Section des projets-->
@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="p-3 card rounded-4 border-0 shadow-lg">
-                                <img class="img-fluid" src="{{ asset('storage/assets/RedVise.jpeg') }}" alt="ITIC Paris" />
+                                <img class="img-fluid" src="{{ asset('assets/RedVise.svg') }}" alt="ITIC Paris" />
                                 <div class="card-body">
                                     <h3 class="fw-bolder">1ere année (Stage)</h3>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="p-3 card rounded-4 border-0 shadow-lg">
-                                <img class="img-fluid" src="{{ asset('storage/assets/itic-png.png') }}" alt="ITIC Paris" />
+                                <img class="img-fluid" src="{{ asset('/assets/ITIC-Paris.svg') }}" alt="ITIC Paris" />
                                 <div class="card-body">
                                     <h3 class="fw-bolder">2e année (Alternance)</h3>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">

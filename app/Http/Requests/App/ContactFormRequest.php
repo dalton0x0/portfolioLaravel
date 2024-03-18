@@ -24,7 +24,24 @@ class ContactFormRequest extends FormRequest
         return [
             'name' => 'required|min:3',
             'email' => 'required|email',
-            'message' => 'required|min:3',
+            'message' => 'required|min:10',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Un nom est requis.',
+            'name.min' => 'Votre nom complet doit contenir au moins :min caractères.',
+            'email.required' => 'Une adresse mail est requise.',
+            'email.email' => 'Veuillez saisir une adresse mail valide.',
+            'message.required' => 'Un message est requis.',
+            'message.min' => 'Votre message doit contenir au moins :min caractères.',
         ];
     }
 }
