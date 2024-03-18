@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AppController::class, 'home'])->name('home');
-Route::get('/projects', [AppController::class, 'projects'])->name('projects');
-Route::get('/training', [AppController::class, 'training'])->name('training');
+Route::prefix('projects')->name('projects.')->group( function () {
+    Route::get('/', [AppController::class, 'projects'])->name('home');
+    Route::get('/internships', [AppController::class, 'internships'])->name('internships');
+    Route::get('/apprenticeships', [AppController::class, 'apprenticeships'])->name('apprenticeships');
+});
+Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');
 Route::get('/skills', [AppController::class, 'skills'])->name('skills');
 Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');

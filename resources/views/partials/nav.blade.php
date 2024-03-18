@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                 <li class="nav-item">
-                    <a @class(['nav-link', 'active text-primary' => str_contains($route, 'projects')]) href="{{ route('projects') }}">Projets</a>
+                    <a @class(['nav-link', 'active text-primary' => str_contains($route, 'projects')]) href="{{ route('projects.home') }}">Projets</a>
                 </li>
                 <li class="nav-item">
-                    <a @class(['nav-link', 'active text-primary' => str_contains($route, 'training')]) href="{{ route('training') }}">Mon parcours</a>
+                    <a @class(['nav-link', 'active text-primary' => str_contains($route, 'trainings')]) href="{{ route('trainings') }}">Mon parcours</a>
                 </li>
                 <li class="nav-item">
                     <a @class(['nav-link', 'active text-primary' => str_contains($route, 'skills')]) href="{{ route('skills') }}">Compétences</a>

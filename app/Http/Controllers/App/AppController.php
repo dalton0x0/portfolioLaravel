@@ -17,9 +17,9 @@ class AppController extends Controller
     {
         return view('app.projects.index');
     }
-    public function training ()
+    public function trainings ()
     {
-        return view('app.training.index');
+        return view('app.trainings.index');
     }
     public function skills ()
     {
@@ -32,6 +32,14 @@ class AppController extends Controller
     public function about ()
     {
         return view('app.about.index');
+    }
+    public function internships ()
+    {
+        return view('app.projects.internships.index');
+    }
+    public function apprenticeships ()
+    {
+        return view('app.projects.apprenticeships.index');
     }
 
     public function contact (ContactFormRequest $request)

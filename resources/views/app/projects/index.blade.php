@@ -19,7 +19,7 @@
                                     <h3 class="fw-bolder">1ere année (Stage)</h3>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
                                         <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                           href="{{ route('projects') }}">Voir
+                                           href="{{ route('projects.internships') }}">Voir
                                         </a>
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@
                                     <h3 class="fw-bolder">2e année (Alternance)</h3>
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
                                         <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                           href="{{ route('projects') }}">Voir
+                                           href="{{ route('projects.apprenticeships') }}">Voir
                                         </a>
                                     </div>
                                 </div>
