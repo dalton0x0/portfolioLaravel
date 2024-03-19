@@ -19,7 +19,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                                     <a class="btn btn-primary"
-                                       href="{{ route('projects.apprenticeships') }}">Lire
+                                       href="{{ route('projects.internships.tunnel-eoip-ipsec') }}">Lire
                                     </a>
                                 </div>
                                 <small class="text-body-secondary">MikroTik</small>
@@ -38,7 +38,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                                     <a class="btn btn-primary"
-                                       href="{{ route('projects.apprenticeships') }}">Lire
+                                       href="{{ route('projects.internships.vpn-ipsec-pfsense') }}">Lire
                                     </a>
                                 </div>
                                 <small class="text-body-secondary">Pfsense</small>
@@ -57,7 +57,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                                     <a class="btn btn-primary"
-                                       href="{{ route('projects.apprenticeships') }}">Lire
+                                       href="{{ route('projects.internships.ocs-inventory') }}">Lire
                                     </a>
                                 </div>
                                 <small class="text-body-secondary">Monitoring</small>
@@ -77,7 +77,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                                     <a class="btn btn-primary"
-                                       href="{{ route('projects.apprenticeships') }}">Lire
+                                       href="{{ route('projects.internships.pxe-mikrotik') }}">Lire
                                     </a>
                                 </div>
                                 <small class="text-body-secondary">MikroTik</small>

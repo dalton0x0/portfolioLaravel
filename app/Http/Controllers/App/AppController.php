@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class AppController extends Controller
 {
-    public function home ()
+    public function index ()
     {
         return view('app.home.index');
     }
@@ -32,14 +32,6 @@ class AppController extends Controller
     public function about ()
     {
         return view('app.about.index');
-    }
-    public function internships ()
-    {
-        return view('app.projects.internships.index');
-    }
-    public function apprenticeships ()
-    {
-        return view('app.projects.apprenticeships.index');
     }
 
     public function contact (ContactFormRequest $request)
