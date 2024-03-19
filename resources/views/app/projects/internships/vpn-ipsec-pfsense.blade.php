@@ -1,6 +1,6 @@
 @extends('layout.app.base')
 
-@section('title', 'Stage')
+@section('title', 'VPN IPsec Pfsense')
 
 @section('content')
 @endsection

@@ -12,14 +12,12 @@
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="card shadow border-0 rounded-4 mb-5">
                         <div class="card-body p-5">
-                            <!-- Listes des compétences en Systeme & Réseau-->
                             <div class="mb-5">
                                 <div class="d-flex align-items-center mb-4">
                                     <div
                                         class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
                                         <i class="bi bi-tools"></i></div>
-                                    <h3 class="fw-bolder mb-0"><span
-                                            class="text-gradient d-inline">En construction ...</span></h3>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">En construction ...</span></h3>
                                 </div>
                             </div>
                         </div>

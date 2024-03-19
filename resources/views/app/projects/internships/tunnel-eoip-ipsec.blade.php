@@ -1,6 +1,6 @@
 @extends('layout.app.base')
 
-@section('title', 'Stage')
+@section('title', 'Tunel EOIP avec IPsec MikroTik')
 
 @section('content')
 @endsection

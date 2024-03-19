@@ -1,6 +1,6 @@
 @extends('layout.app.base')
 
-@section('title', 'Stage')
+@section('title', 'OCS Inventory NG')
 
 @section('content')
 @endsection

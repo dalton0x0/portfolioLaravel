@@ -1,6 +1,6 @@
 @extends('layout.app.base')
 
-@section('title', 'Stage')
+@section('title', 'PXE MikroTik')
 
 @section('content')
 @endsection

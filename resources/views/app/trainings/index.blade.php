@@ -4,9 +4,11 @@
 
 @section('content')
     <div class="container px-5 my-5">
+        <!-- Titre  -->
         <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">@yield('title')</span></h1>
         </div>
+        <!-- Experiences & Cursus -->
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-11 col-xl-9 col-xxl-8">
                 <!-- Experiences Professionnels  -->
@@ -15,8 +17,7 @@
                         <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
                         <!-- Mon CV -->
                         <a class="btn btn-primary px-4 py-3" href="{{ asset('storage/assets/cv-cheridanh-tsiela.pdf') }}" target="_blank">
-                            <div class="d-inline-block bi bi-download me-2"></div>
-                            Télécharger mon CV
+                            <i class="d-inline-block bi bi-download me-2"></i>Télécharger mon CV
                         </a>
                     </div>
                     <!-- Contenu d'une expérience -->
@@ -31,9 +32,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Administrateur Système & Réseau Junior
-                                    </div>
+                                    <div>Administrateur Système & Réseau Junior</div>
                                 </div>
                             </div>
                         </div>
@@ -50,9 +49,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Technicien Système & Réseau
-                                    </div>
+                                    <div>Technicien Système & Réseau</div>
                                 </div>
                             </div>
                         </div>
@@ -69,9 +66,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Technicien Support Informatique
-                                    </div>
+                                    <div>Technicien Support Informatique</div>
                                 </div>
                             </div>
                         </div>
@@ -94,9 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        2e année BTS SIO option SISR
-                                    </div>
+                                    <div>2e année BTS SIO option SISR</div>
                                 </div>
                             </div>
                         </div>
@@ -115,9 +108,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Formation en Administration Sytème & Réseau Informatique
-                                    </div>
+                                    <div>Formation en Administration Sytème & Réseau Informatique</div>
                                 </div>
                             </div>
                         </div>
@@ -136,9 +127,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Baccalauréat Général
-                                    </div>
+                                    <div>Baccalauréat Général</div>
                                 </div>
                             </div>
                         </div>
@@ -157,15 +146,15 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>
-                                        Brevet d'Etude du Premier Cycle
-                                    </div>
+                                    <div>Brevet d'Etude du Premier Cycle</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!-- Fin Cursus -->
             </div>
         </div>
+        <!-- Fin Experiences & Cursus -->
     </div>
 @endsection
