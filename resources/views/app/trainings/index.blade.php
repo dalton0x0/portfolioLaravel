@@ -86,6 +86,27 @@
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
+                                        <div class="text-secondary fw-bolder mb-2">2023 - 2024</div>
+                                        <div class="mb-2">
+                                            <div class="small fw-bolder">ITIC Paris</div>
+                                            <div class="small text-muted">Paris, France</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        2e année BTS SIO option SISR
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenu d'un cursus -->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
                                         <div class="text-secondary fw-bolder mb-2">2018 - 2021</div>
                                         <div class="mb-2">
                                             <div class="small fw-bolder">Nuxell Technologies</div>
