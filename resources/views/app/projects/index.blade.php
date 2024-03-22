@@ -1,4 +1,4 @@
-@extends('layout.app.base')
+@extends('layouts.app.base')
 
 @section('title', 'Mes expériences professionnelles')
 
@@ -13,27 +13,35 @@
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <div class="p-3 card rounded-4 border-0 shadow-lg">
-                                <img class="img-fluid" src="{{ asset('assets/images/projects/RedVise.png') }}" alt="ITIC Paris" />
+                            <div class="card  rounded-4 shadow">
+                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/RedVise-horizontal.png') }}"
+                                     alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
-                                    <h3 class="fw-bolder">1ere année (Stage)</h3>
-                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
-                                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                           href="{{ route('projects.internships.index') }}">Voir
-                                        </a>
+                                    <h4 class="card-title">1ere année : Stage</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
+                                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                                               href="{{ route('projects.internships.index') }}">Voir
+                                            </a>
+                                        </div>
+                                        <small class="text-body-secondary">RedVise</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <div class="p-3 card rounded-4 border-0 shadow-lg">
-                                <img class="img-fluid" src="{{ asset('/assets/images/projects/ITIC-Paris.png') }}" alt="RedVise" />
+                            <div class="card shadow rounded-4">
+                                <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/ITIC-Paris.svg') }}"
+                                     alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
-                                    <h3 class="fw-bolder">2e année (Alternance)</h3>
-                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
-                                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                           href="{{ route('projects.apprenticeships.index') }}">Voir
-                                        </a>
+                                    <h4 class="card-title">2e année : Alternance</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
+                                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                                               href="{{ route('projects.apprenticeships.index') }}">Voir
+                                            </a>
+                                        </div>
+                                        <small class="text-body-secondary">ITIC Paris</small>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +56,8 @@
         <div class="container px-5 my-5">
             <div class="text-center">
                 <h2 class="display-4 fw-bolder mb-4">Informatiser pour mieux gérer !</h2>
-                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ route('about') }}">Me contatcer</a>
+                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ route('about') }}">Me
+                    contatcer</a>
             </div>
         </div>
     </section>

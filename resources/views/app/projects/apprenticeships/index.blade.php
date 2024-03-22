@@ -1,4 +1,4 @@
-@extends('layout.app.base')
+@extends('layouts.app.base')
 
 @section('title', 'Alternance')
 

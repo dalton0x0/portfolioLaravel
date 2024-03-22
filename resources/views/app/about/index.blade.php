@@ -1,4 +1,4 @@
-@extends('layout.app.base')
+@extends('layouts.app.base')
 
 @section('title', 'A propos')
 
@@ -15,12 +15,16 @@
                             Administrateur Système & Réseau Junior
                         </p>
                         <p class="text-muted">
-                            Etudiant en 2e année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et Réseaux) à l'école ITIC Paris,
-                            j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement d'application web.
+                            Etudiant en 2e année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et
+                            Réseaux) à l'école ITIC Paris,
+                            j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement
+                            d'application web.
                         </p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
-                            <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" target="_blank" href="https://github.com/cheridanh"><i class="bi bi-github"></i></a>
+                            <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a class="text-gradient" target="_blank" href="https://github.com/cheridanh"><i
+                                    class="bi bi-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +37,8 @@
             <!-- Formulaire de contact -->
             <div class="bg-light rounded-4 py-5 px-4 px-md-5">
                 <div class="text-center mb-5">
-                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i
+                            class="bi bi-envelope"></i></div>
                     <h1 class="fw-bolder">Contact</h1>
                     <p class="lead fw-normal text-muted mb-0">
                         Me laisser un message ?
