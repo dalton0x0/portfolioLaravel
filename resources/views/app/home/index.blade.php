@@ -239,7 +239,7 @@
     </header>
     <!-- A propos -->
     <section class="bg-light">
-        <div class="container px-5">
+        <div class="container px-4">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xxl-8">
                     <div class="text-center my-5">
