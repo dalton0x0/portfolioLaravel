@@ -71,7 +71,7 @@
                         <div class="card-body">
                             <h4 class="card-title">PXE sur MikroTik CHR</h4>
                             <p class="card-text">
-                                Découvrez un autre moyen simple et efficace d'installer les OS parle réseau.
+                                Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">

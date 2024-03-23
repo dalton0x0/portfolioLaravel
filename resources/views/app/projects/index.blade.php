@@ -24,7 +24,7 @@
                                                href="{{ route('projects.internships.index') }}">Voir
                                             </a>
                                         </div>
-                                        <small class="text-body-secondary">RedVise</small>
+                                        <small class="text-body-secondary">Redvise Ltd</small>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,8 @@
                 </div>
             </div>
         </div>
-    </section><section class="pb-5">
+    </section>
+    <section class="pb-5">
         <div class="container px-4">
             <div class="text-center mb-5">
                 <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets BTS</span></h1>

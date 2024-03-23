@@ -12,10 +12,10 @@
             <!-- Compétences -->
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <div class="card shadow border-0 rounded-4 mb-5">
+                    <div class="card shadow border-0 rounded-4">
                         <div class="card-body p-5">
                             <!-- Listes des compétences en Systeme & Réseau -->
-                            <div class="mb-5">
+                            <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
                                         @include('partials.icon', ['class' => 'bi-tools'])
@@ -45,6 +45,20 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin compétences -->
+        </div>
+    </section>
+    <section>
+        <div class="container px-4 my-5">
+            <!-- Compétences -->
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="card shadow border-0 rounded-4">
+                        <div class="card-body p-5">
                             <!-- Liste des compétences en Dev -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">

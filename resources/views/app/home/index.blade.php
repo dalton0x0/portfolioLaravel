@@ -5,7 +5,7 @@
 @section('content')
     <!-- Header -->
     <header class="py-5">
-        <div class="container px-4 pb-5">
+        <div class="container px-4">
             <div class="row gx-5 align-items-center">
                 <!-- Contenu Header -->
                 <div class="col-xxl-5">
@@ -238,7 +238,7 @@
         </div>
     </header>
     <!-- A propos -->
-    <section class="bg-light py-5">
+    <section class="bg-light">
         <div class="container px-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xxl-8">
