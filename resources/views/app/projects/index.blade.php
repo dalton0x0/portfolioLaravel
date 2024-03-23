@@ -5,7 +5,7 @@
 @section('content')
     <!-- Section des projets-->
     <section class="py-5">
-        <div class="container px-5">
+        <div class="container">
             <div class="text-center mb-5">
                 <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">@yield('title')</span></h1>
             </div>

@@ -5,7 +5,7 @@
 @section('content')
     <!-- A propos -->
     <section class="bg-light">
-        <div class="container px-5">
+        <div class="container">
             <div class="row gx-5 justify-content-center">
                 <div class="col-xxl-8">
                     @include('partials.flash')
