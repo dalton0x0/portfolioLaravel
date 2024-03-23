@@ -61,7 +61,7 @@ class ProjectController extends Controller
         return to_route('admin.projects.index')->with('success', "Le projet a été créé avec success");
         */
 
-        Project::create(array_merge($request->only('title', 'body')));
+        Project::create(array_merge($request->all()));
 
         dd($request);
 

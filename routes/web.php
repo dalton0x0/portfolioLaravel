@@ -18,12 +18,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('projects', (ProjectController::class));
     Route::resource('categories', (CategoryController::class));
 });
+*/
 
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {
@@ -36,6 +37,12 @@ Route::prefix('projects')->name('projects.')->group( function () {
         Route::get('/pxe-mikrotik', [InternshipsController::class, 'pxeMikrotik'])->name('pxe-mikrotik');
     });
     Route::prefix('apprenticeships')->name('apprenticeships.')->group( function () {
+        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
+    });
+    Route::prefix('system')->name('system.')->group( function () {
+        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
+    });
+    Route::prefix('network')->name('network.')->group( function () {
         Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
     });
 });

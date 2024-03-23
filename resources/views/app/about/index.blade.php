@@ -33,7 +33,7 @@
     </section>
     <!-- Contact -->
     <section>
-        <div class="container px-5">
+        <div class="container">
             <!-- Formulaire de contact -->
             <div class="bg-light rounded-4 pb-5 px-4 px-md-5">
                 <div class="text-center mb-5">

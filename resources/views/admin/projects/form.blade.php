@@ -12,7 +12,7 @@
                             <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->name : 'Créer un project' }}</span>
                         </h1>
                     </div>
-                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post">
+                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="content">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
                         @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
@@ -22,11 +22,11 @@
                                 <i class="bi-arrow-left-short"></i>
                             </a>
                             @if($project->exists)
-                                <button class="btn btn-outline-primary me-2 rounded">
+                                <button class="btn btn-outline-primary me-2 rounded" type="submit">
                                     <i class="bi-check2-circle"></i>
                                 </button>
                             @else
-                                <button class="btn btn-outline-success me-2 rounded">
+                                <button class="btn btn-outline-success me-2 rounded" type="submit">
                                     <i class="bi-plus-circle"></i>
                                 </button>
                             @endif
@@ -61,6 +61,50 @@
             autoresize_bottom_margin: 0,
             link_default_target: '_blank',
             language: 'fr_FR',
+            file_picker_callback: (callback, value, meta) => {
+                // Provide file and text for the link dialog
+                if (meta.filetype == 'file') {
+                    callback('mypage.html', { text: 'My text' });
+                }
+
+                // Provide image and alt text for the image dialog
+                if (meta.filetype == 'image') {
+                    callback('myimage.jpg', { alt: 'My alt text' });
+                }
+
+                // Provide alternative source and posted for the media dialog
+                if (meta.filetype == 'media') {
+                    callback('movie.mp4', { source2: 'alt.ogg', poster: 'image.jpg' });
+                }
+            }
+        });
+
+        $(document).ready(function() {
+
+            var formId = '#content';
+
+            $(formId).on('submit', function(e) {
+                e.preventDefault();
+
+                var data = $(formId).serializeArray();
+                data.push({name: 'content', value: tinyMCE.get('content').getContent()});
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(formId).attr('data-action'),
+                    data: data,
+                    success: function (response, textStatus, xhr) {
+                        window.location=response.redirectTo;
+                    },
+                    complete: function (xhr) {
+
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        var response = XMLHttpRequest;
+
+                    }
+                });
+            });
         });
     </script>
 @endsection

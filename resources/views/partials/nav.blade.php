@@ -26,9 +26,9 @@
                     <li class="nav-item">
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('about') }}">A propos</a>
                     </li>
-                    <li class="nav-item">
+                    {{--<li class="nav-item">
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('admin.index') }}">Se connecter</a>
-                    </li>
+                    </li>--}}
                 @else
                     <li class="nav-item">
                         <a @class(['nav-link']) href="{{ route('index') }}">Accueil</a>
