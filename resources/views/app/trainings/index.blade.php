@@ -16,9 +16,8 @@
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
                         <!-- Mon CV -->
-                        <a class="btn btn-primary px-4 py-3"
-                           href="{{ asset('storage/assets/cv-cheridanh-tsiela.pdf') }}" target="_blank">
-                            <i class="d-inline-block bi bi-download me-2"></i>Télécharger mon CV
+                        <a class="btn btn-primary px-4 py-3" href="{{ asset('storage/assets/cv-cheridanh-tsiela.pdf') }}" target="_blank">
+                            @include('partials.icon', ['class' => 'bi-download'])Télécharger mon CV
                         </a>
                     </div>
                     <!-- Contenu d'une expérience -->

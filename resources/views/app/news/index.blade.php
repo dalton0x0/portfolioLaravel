@@ -14,11 +14,10 @@
                         <div class="card-body p-5">
                             <div class="mb-5">
                                 <div class="d-flex align-items-center mb-4">
-                                    <div
-                                            class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
-                                        <i class="bi bi-tools"></i></div>
-                                    <h3 class="fw-bolder mb-0"><span
-                                                class="text-gradient d-inline">En construction ...</span></h3>
+                                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                        @include('partials.icon', ['class' => 'bi-tools'])
+                                    </div>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">En construction ...</span></h3>
                                 </div>
                             </div>
                         </div>

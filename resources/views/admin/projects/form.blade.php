@@ -18,9 +18,9 @@
                         @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
                         @include('partials.input', ['type' => 'textarea','name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
                         <div>
-                            <button class="btn btn-primary me-2 rounded">
+                            <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>
-                            </button>
+                            </a>
                             @if($project->exists)
                                 <button class="btn btn-outline-primary me-2 rounded">
                                     <i class="bi-check2-circle"></i>

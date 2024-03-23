@@ -14,13 +14,10 @@
                             <div class="text-uppercase">Etudiant &middot; BTS SIO &middot; Option SISR</div>
                         </div>
                         <div class="fs-3 fw-light text-muted">Portfolio</div>
-                        <h1 class="display-3 fw-bolder mb-5"><span
-                                    class="text-gradient d-inline">Chéridanh TSIELA</span></h1>
+                        <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Chéridanh TSIELA</span></h1>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                               href="{{ route('skills') }}">Compétences</a>
-                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                               href="{{ route('projects.index') }}">Projets</a>
+                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{ route('skills') }}">Compétences</a>
+                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ route('projects.index') }}">Projets</a>
                         </div>
                     </div>
                 </div>
@@ -249,16 +246,16 @@
                         <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Chéridanh</span></h2>
                         <p class="lead fw-light mb-4">Administrateur Système & Réseau Junior</p>
                         <p class="text-muted">
-                            Etudiant en 2e année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et
-                            Réseaux) à l'école ITIC Paris,
-                            j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement
-                            d'application web.
+                            Etudiant en 2e année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et Réseaux) à l'école ITIC Paris,
+                            j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement d'application web.
                         </p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
-                            <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela"><i
-                                        class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" href="https://github.com/cheridanh" target="_blank"><i
-                                        class="bi bi-github"></i></a>
+                            <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela">
+                                @include('partials.icon', ['class' => 'bi-linkedin'])
+                            </a>
+                            <a class="text-gradient" href="https://github.com/cheridanh" target="_blank">
+                                @include('partials.icon', ['class' => 'bi-github'])
+                            </a>
                         </div>
                     </div>
                 </div>

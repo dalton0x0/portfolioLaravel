@@ -21,7 +21,7 @@
                                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                                             <a class="btn btn-primary" href="{{ route('admin.projects.index') }}">Gérer</a>
                                         </div>
-                                        <small class="text-body-secondary">Total : </small>
+                                        <small class="text-body-secondary">Total : {{ $projects->count() }}</small>
                                     </div>
                                 </div>
                             </div>
