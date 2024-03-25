@@ -1,20 +1,24 @@
 <x-mail::message>
-# Votre message de contact
+# Bonjour !!!
 
-Votre message de contact a bien été envoyé :
+Votre message de contact a été envoyé avec succès !
+
+Récapulatif :
 
 - Nom : {{ $data['name'] }}<br>
 - Email : {{ $data['email'] }}<br>
 
 # Contenu du message :
 
-- Message :<br><br>
 {{ $data['message'] }}<br>
 
+# Retourner sur le site ?
+
 <x-mail::button :url="'https://www.cheridanh.cg'">
-    Retourner sur le site ?
+    Cliquez ici
 </x-mail::button>
 
 Merci,<br>
-A très bientôt {{ config('app.name') }}
+A très bientôt<br>
+{{ config('app.name') }}
 </x-mail::message>
