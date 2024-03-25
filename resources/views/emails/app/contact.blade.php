@@ -12,7 +12,7 @@ Récapulatif :
 
 {{ $data['message'] }}<br>
 
-# Retourner sur le site ?
+# Retourner sur mon site ?
 
 <x-mail::button :url="'https://www.cheridanh.cg'">
     Cliquez ici
