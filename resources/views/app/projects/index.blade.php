@@ -17,7 +17,7 @@
                                 <img class="img-fluid p-2" src="{{ asset('assets/images/projects/logo-redvise.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
-                                    <h4 class="card-title">1ere année : Stage</h4>
+                                    <h4 class="card-title">1<sup>re</sup> année : Stage</h4>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
                                             <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
@@ -34,7 +34,7 @@
                                 <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/logo-itic.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
-                                    <h4 class="card-title">2e année : Alternance</h4>
+                                    <h4 class="card-title">2<sup>e</sup> année : Alternance</h4>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
                                             <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
@@ -104,7 +104,7 @@
             <div class="text-center">
                 <h2 class="display-4 fw-bolder mb-4">Informatiser pour mieux gérer !</h2>
                 <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ route('about') }}">Me
-                    contatcer</a>
+                    contacter</a>
             </div>
         </div>
     </section>
