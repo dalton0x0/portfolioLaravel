@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="card  rounded-4 shadow">
-                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/RedVise-horizontal.png') }}"
+                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/logo-redvise.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
                                     <h4 class="card-title">1ere année : Stage</h4>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card shadow rounded-4">
-                                <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/RedVise-horizontal.png') }}"
+                                <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/logo-itic.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
                                     <h4 class="card-title">2e année : Alternance</h4>
@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="card rounded-4 shadow">
-                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/systeme.png') }}"
+                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/cover-systeme.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
                                     <h4 class="card-title">Système</h4>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card shadow rounded-4">
-                                <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/reseau.png') }}"
+                                <img class="img-fluid p-2" src="{{ asset('/assets/images/projects/cover-reseau.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
                                     <h4 class="card-title">Réseau</h4>
