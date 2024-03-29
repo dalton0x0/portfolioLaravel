@@ -3,7 +3,7 @@
 @section('title', 'Mes expériences professionnelles')
 
 @section('content')
-    <!-- Section des projets-->
+    <!-- Section Expériences Professionnelles -->
     <section class="py-5">
         <div class="container px-4">
             <div class="text-center mb-5">
@@ -51,6 +51,7 @@
             </div>
         </div>
     </section>
+    <!-- Section Projets BTS -->
     <section class="pb-5">
         <div class="container px-4">
             <div class="text-center mb-5">
@@ -89,6 +90,37 @@
                                             </a>
                                         </div>
                                         <small class="text-body-secondary">MikroTik</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Projets en cours ! -->
+    <section class="pb-5">
+        <div class="container px-4">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets en cours de formation</span></h1>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <div class="card rounded-4 shadow">
+                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/cover-systeme.png') }}"
+                                     alt="Tunnel EOIP MikroTik"/>
+                                <div class="card-body">
+                                    <h4 class="card-title">Formation BTS</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
+                                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                                               href="{{ route('projects.system.index') }}">Voir
+                                            </a>
+                                        </div>
+                                        <small class="text-body-secondary">Année 1 & 2</small>
                                     </div>
                                 </div>
                             </div>
