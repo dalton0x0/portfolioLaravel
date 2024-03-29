@@ -110,14 +110,14 @@
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <div class="card rounded-4 shadow">
-                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/cover-systeme.png') }}"
+                                <img class="img-fluid p-2" src="{{ asset('assets/images/projects/cover-tp-cours.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body">
                                     <h4 class="card-title">Formation BTS</h4>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mt-3">
                                             <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                                               href="{{ route('projects.system.index') }}">Voir
+                                               href="{{ route('projects.tp.index') }}">Voir
                                             </a>
                                         </div>
                                         <small class="text-body-secondary">Année 1 & 2</small>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\App\AppController;
 use App\Http\Controllers\App\ApprenticeshipsController;
 use App\Http\Controllers\App\InternshipsController;
+use App\Http\Controllers\App\TPController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +45,9 @@ Route::prefix('projects')->name('projects.')->group( function () {
     });
     Route::prefix('network')->name('network.')->group( function () {
         Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
+    });
+    Route::prefix('tp')->name('tp.')->group( function () {
+        Route::get('/', [TPController::class, 'index'])->name('index');
     });
 });
 Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');
