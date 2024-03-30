@@ -8,121 +8,53 @@
         <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Windows Server</span></h1>
         </div>
-        <!-- Contenu internships -->
+        <!-- Contenu Windows Server -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-EOIP.png') }}"
-                         alt="Tunnel EOIP MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Active Directory & DNS</h4>
-                        <p class="card-text">
-                            Interconnection de deux sous réseaux différents avec DHCP distant sans utiliser de
-                            relais DHCP.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.tunnel-eoip-ipsec') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-IPsec.png') }}"
-                         alt="VPN IPsec Pfsense"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Serveur DHCP</h4>
-                        <p class="card-text">
-                            Un routeur firewall puissant et simple d'utilisation pour tous vos besoins en
-                            administration réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.vpn-ipsec-pfsense') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/OCS.png') }}"
-                         alt="OCS Inventory NG"/>
-                    <div class="card-body h-100">
-                        <h4 class="card-title">Serveur Web IIS</h4>
-                        <p class="card-text">
-                            Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
-                            informatique.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.ocs-inventory') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/PXE.png') }}"
-                         alt="PXE MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Serveur WDS</h4>
-                        <p class="card-text">
-                            Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.pxe-mikrotik') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/PXE.png') }}"
-                         alt="PXE MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Serveur TSE</h4>
-                        <p class="card-text">
-                            Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.pxe-mikrotik') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/PXE.png') }}"
-                         alt="PXE MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Serveur VPN PPTP et L2TP</h4>
-                        <p class="card-text">
-                            Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.pxe-mikrotik') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Windows Server</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('partials.card', [
+                'cover' => 'internships/home/Tunnel-EOIP.png',
+                'title' => 'Active Directory & DNS',
+                'description' => "Gestion des utilisateurs et résolution des noms de domaine avec Microsoft AD et DNS.",
+                'path' => 'internships.vpn-ipsec-pfsense',
+                'category' => 'Windows Server'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/Tunnel-IPsec.png',
+                'title' => 'Serveur DHCP',
+                'description' => "Attribution dynamique des configurations réseau sur des postes clients avec le service DHCP.",
+                'path' => 'internships.vpn-ipsec-pfsense',
+                'category' => 'Windows Server'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/OCS.png',
+                'title' => 'Serveur Web IIS',
+                'description' => "Mettre en place un service web interne pour la visibilté de l'entreprise et autre.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Windows Server'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Serveur WDS',
+                'description' => "Déploiement d'images d'installtion des systèmes d'exploitation par le réseau.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Windows Server'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Serveur TSE',
+                'description' => "Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Windows Server'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Serveur VPN PPTP et L2TP',
+                'description' => "Etablir une connexion distante sécurisée entre un utilisateur et les services internes de
+                l'entreprise.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Windows Server'
+            ])
         </div>
-        <!-- Fin contenu internships -->
+        <!-- Fin contenu Windows Server -->
     </div>
 </section>
 <section class="album pb-5 bg-body-tertiary">
@@ -130,103 +62,45 @@
         <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Linux</span></h1>
         </div>
-        <!-- Contenu internships -->
+        <!-- Contenu Linux -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-EOIP.png') }}"
-                         alt="Tunnel EOIP MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Bind (DNS)</h4>
-                        <p class="card-text">
-                            Interconnection de deux sous réseaux différents avec DHCP distant sans utiliser de
-                            relais DHCP.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.tunnel-eoip-ipsec') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-IPsec.png') }}"
-                         alt="VPN IPsec Pfsense"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Apache MariaDB & PHP</h4>
-                        <p class="card-text">
-                            Un routeur firewall puissant et simple d'utilisation pour tous vos besoins en
-                            administration réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.vpn-ipsec-pfsense') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/OCS.png') }}"
-                         alt="OCS Inventory NG"/>
-                    <div class="card-body h-100">
-                        <h4 class="card-title">Bookstack</h4>
-                        <p class="card-text">
-                            Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
-                            informatique.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.ocs-inventory') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/PXE.png') }}"
-                         alt="PXE MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Nextcloud</h4>
-                        <p class="card-text">
-                            Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.pxe-mikrotik') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/PXE.png') }}"
-                         alt="PXE MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Free IPA</h4>
-                        <p class="card-text">
-                            Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.pxe-mikrotik') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Rocky Linux</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Bind (DNS)',
+                'description' => "Mettre en place la résolutuion des noms de domaines sur un serveur Linux.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'LAMP',
+                'description' => "Installer Apache2, MariaDB et la dernière version de PHP sur votre serveur linux.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Bookstack',
+                'description' => "Logiciel OpenSource nécessaire pour vos documentations sous forme de Wiki.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Nextcloud',
+                'description' => "Logiciel OpenSource avec interface graphique web pour l'hébergement de vos fichiers.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Free IPA',
+                'description' => "Système de gestion d'identité gratuit et open source.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Rocky Linux'
+            ])
         </div>
-        <!-- Fin contenu internships -->
+        <!-- Fin contenu Linux -->
     </div>
 </section>
 <section class="album pb-5 bg-body-tertiary">
@@ -234,67 +108,32 @@
         <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Inventoring et Monitoring</span></h1>
         </div>
-        <!-- Contenu internships -->
+        <!-- Contenu Inventoring et Monitoring -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-EOIP.png') }}"
-                         alt="Tunnel EOIP MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">OCS Inventoring NG</h4>
-                        <p class="card-text">
-                            Interconnection de deux sous réseaux différents avec DHCP distant sans utiliser de
-                            relais DHCP.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.tunnel-eoip-ipsec') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-IPsec.png') }}"
-                         alt="VPN IPsec Pfsense"/>
-                    <div class="card-body">
-                        <h4 class="card-title">GLPI</h4>
-                        <p class="card-text">
-                            Un routeur firewall puissant et simple d'utilisation pour tous vos besoins en
-                            administration réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.vpn-ipsec-pfsense') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/OCS.png') }}"
-                         alt="OCS Inventory NG"/>
-                    <div class="card-body h-100">
-                        <h4 class="card-title">ZABBIX</h4>
-                        <p class="card-text">
-                            Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
-                            informatique.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.ocs-inventory') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Debian</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'OCS Inventoring NG',
+                'description' => "Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
+                informatique.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'GLPI',
+                'description' => "Logiciel libre de gestion des services informatiques et de gestion des services d'assistance.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'ZABBIX',
+                'description' => "Logiciel libre permettant de surveiller l'état de divers services réseau, serveurs et autres.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Debian'
+            ])
         </div>
-        <!-- Fin contenu internships -->
+        <!-- Fin contenu Inventoring et Monitoring -->
     </div>
 </section>
 <section class="album pb-5 bg-body-tertiary">
@@ -302,48 +141,25 @@
         <div class="text-center mb-5">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Pfsense</span></h1>
         </div>
-        <!-- Contenu internships -->
+        <!-- Contenu Pfsense -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-EOIP.png') }}"
-                         alt="Tunnel EOIP MikroTik"/>
-                    <div class="card-body">
-                        <h4 class="card-title">HRSP (CARP)</h4>
-                        <p class="card-text">
-                            Interconnection de deux sous réseaux différents avec DHCP distant sans utiliser de
-                            relais DHCP.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.tunnel-eoip-ipsec') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Pfsense</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow rounded-4">
-                    <img class="img-fluid p-2" src="{{ asset('assets/images/internships/home/Tunnel-IPsec.png') }}"
-                         alt="VPN IPsec Pfsense"/>
-                    <div class="card-body">
-                        <h4 class="card-title">Règle NAT</h4>
-                        <p class="card-text">
-                            Un routeur firewall puissant et simple d'utilisation pour tous vos besoins en
-                            administration réseau.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                <a class="btn btn-primary" href="{{ route('projects.internships.vpn-ipsec-pfsense') }}">Lire</a>
-                            </div>
-                            <small class="text-body-secondary">Pfsense</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'HRSP (CARP)',
+                'description' => "Redondance de deux routeurs actifs pour assurer la haute disponibilté et la continuité des
+                services.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Pfsense'
+            ])
+            @include('partials.card', [
+                'cover' => 'internships/home/PXE.png',
+                'title' => 'Règle NAT',
+                'description' => "Assurer la translation des adresses IP de votre réseau interne.",
+                'path' => 'internships.ocs-inventory',
+                'category' => 'Pfsense'
+            ])
         </div>
-        <!-- Fin contenu internships -->
+        <!-- Fin contenu Pfsense -->
     </div>
 </section>
 @endsection

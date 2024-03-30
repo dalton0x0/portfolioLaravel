@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\App\ContactFormRequest;
 use App\Mail\ContactSendMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class AppController extends Controller
 {
@@ -39,5 +40,9 @@ class AppController extends Controller
         $contact = $request->all();
         Mail::to($request->email)->send(new ContactSendMail($request->validated()));
         return back()->with('success', "Merci ! J'ai bien reçu votre message !");
+    }
+
+    public function downloadCV () {
+        return Storage::download('public/pdf/cv/cv-cheridanh-tsiela.pdf');
     }
 }

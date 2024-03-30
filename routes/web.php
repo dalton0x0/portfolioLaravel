@@ -55,3 +55,5 @@ Route::get('/skills', [AppController::class, 'skills'])->name('skills');
 Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
+
+Route::get('/downloadCV', [AppController::class, 'downloadCV'])->name('downloadCV');
