@@ -12,11 +12,11 @@
                             <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->name : 'Créer un project' }}</span>
                         </h1>
                     </div>
-                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="content">
+                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
                         @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
-                        @include('partials.input', ['type' => 'textarea','name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
+                        @include('partials.input', ['type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
                         <div>
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>
@@ -79,32 +79,10 @@
             }
         });
 
-        $(document).ready(function() {
-
-            var formId = '#content';
-
-            $(formId).on('submit', function(e) {
-                e.preventDefault();
-
-                var data = $(formId).serializeArray();
-                data.push({name: 'content', value: tinyMCE.get('content').getContent()});
-
-                $.ajax({
-                    type: 'POST',
-                    url: $(formId).attr('data-action'),
-                    data: data,
-                    success: function (response, textStatus, xhr) {
-                        window.location=response.redirectTo;
-                    },
-                    complete: function (xhr) {
-
-                    },
-                    error: function (XMLHttpRequest, textStatus, errorThrown) {
-                        var response = XMLHttpRequest;
-
-                    }
-                });
-            });
+        document.getElementById('ProjectContent').addEventListener('submit', function(event) {
+            var content = tinymce.get('content').getContent();
+            document.getElementById('content').value = content;
         });
+
     </script>
 @endsection

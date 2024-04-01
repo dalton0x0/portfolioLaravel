@@ -35,37 +35,14 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-        $content = $request->description;
+        $content = $request->input('content');
 
-        $dom = new DOMDocument();
-        $dom->loadHTML($content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-
-        $images = $dom->getElementsByTagName('img');
-
-        foreach ($images as $key => $img) {
-            $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[2]);
-            $image_name = "/uploads" . time() . $key . '.png';
-            file_put_contents(public_path().$image_name,$data);
-
-            $img->removeAttribute('src');
-            $img->setAttribute('src', $image_name);
-        }
-
-        $content = $dom->saveHTML();
-
-        $project = Project::create([
-            'title' => $request->title,
-            'content' => $content
+        Project::create([
+            'title' => $request->input('title'),
+            'content' => $content,
         ]);
-        return to_route('admin.projects.index')->with('success', "Le projet a été créé avec success");
-        */
 
-        Project::create(array_merge($request->all()));
-
-        dd($request);
-
-        return response()->json(['redirectTo' => '/posts']);
+        dd('test');
     }
 
     /**
