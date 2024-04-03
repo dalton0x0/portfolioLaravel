@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="container py-5">
+        @include('partials.flash')
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">@yield('title') : {{ $projects->count() }}</span></h1>
             <a href="{{ route('admin.projects.create') }}" class="btn btn-outline-success me-2 rounded"><i class="bi-plus-circle"></i></a>
@@ -21,7 +22,7 @@
             <tbody>
             @foreach($projects as $project)
                 <tr>
-                    <td>{{ $project->name }}</td>
+                    <td>{{ $project->title }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
                             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-outline-primary me-2 rounded">

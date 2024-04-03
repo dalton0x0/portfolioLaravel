@@ -19,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-/*
+
 Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('projects', (ProjectController::class));
     Route::resource('categories', (CategoryController::class));
 });
-*/
+
 
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\ProjectFormRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -33,16 +34,10 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProjectFormRequest $request)
     {
-        $content = $request->input('content');
-
-        Project::create([
-            'title' => $request->input('title'),
-            'content' => $content,
-        ]);
-
-        dd('test');
+        $project = Project::create($request->validated());
+        return to_route('admin.projects.index')->with('success', 'Le projet a été crée avec succès !');
     }
 
     /**
@@ -58,15 +53,18 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.form', [
+            'project' => $project
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Project $project)
+    public function update(ProjectFormRequest $request, Project $project)
     {
-        //
+        $project->update($request->validated());
+        return to_route('admin.projects.index')->with('success', 'Le projet a été modifié avec succès !');
     }
 
     /**
@@ -74,6 +72,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return to_route('admin.projects.index')->with('danger', "Le projet a été supprimé avec succès");
     }
 }

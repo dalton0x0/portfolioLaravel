@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <div class="text-center mb-5">
                         <h1 class="display-5 fw-bolder">
-                            <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->name : 'Créer un project' }}</span>
+                            <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un project' }}</span>
                         </h1>
                     </div>
                     <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent">
@@ -52,8 +52,6 @@
                 { title: 'French', code: 'fr' },
                 { title: 'English (US)', code: 'en_US' },
                 { title: 'English (UK)', code: 'en_UK' },
-                { title: 'Spanish', code: 'es' },
-                { title: 'Portuguese', code: 'pt' },
             ],
             spellchecker_language: 'fr',
             spellchecker_dialog: true,
