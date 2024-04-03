@@ -57,5 +57,5 @@ Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
 
 Route::get('/downloadCv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
-Route::get('/downloadProjectSystem', [PdfDownloadController::class, 'downloadProjectSystem'])->name('downloadProjectSystem');
+Route::get('/downloadProjectSystemSamba', [PdfDownloadController::class, 'downloadProjectSystemSamba'])->name('downloadProjectSystemSamba');
 Route::get('/downloadProjectNetwork', [PdfDownloadController::class, 'downloadProjectNetwork'])->name('downloadProjectNetwork');
