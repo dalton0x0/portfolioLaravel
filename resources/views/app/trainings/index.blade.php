@@ -16,7 +16,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
                         <!-- Mon CV -->
-                        <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('downloadCV') }}">
+                        <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('downloadCv') }}">
                             @include('partials.icon', ['class' => 'd-inline-block bi-download']) CV
                         </a>
                     </div>

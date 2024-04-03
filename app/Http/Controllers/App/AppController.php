@@ -41,8 +41,4 @@ class AppController extends Controller
         Mail::to($request->email)->send(new ContactSendMail($request->validated()));
         return back()->with('success', "Merci ! J'ai bien reçu votre message !");
     }
-
-    public function downloadCV () {
-        return Storage::download('public/pdf/cv/cv-cheridanh-tsiela.pdf');
-    }
 }

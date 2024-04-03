@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\App\AppController;
 use App\Http\Controllers\App\ApprenticeshipsController;
 use App\Http\Controllers\App\InternshipsController;
+use App\Http\Controllers\App\PdfDownloadController;
 use App\Http\Controllers\App\TpController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,6 @@ Route::prefix('admin')->name('admin.')->group( function () {
     Route::resource('projects', (ProjectController::class));
     Route::resource('categories', (CategoryController::class));
 });
-
 
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {
@@ -56,4 +56,6 @@ Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
 
-Route::get('/downloadCV', [AppController::class, 'downloadCV'])->name('downloadCV');
+Route::get('/downloadCv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
+Route::get('/downloadProjectSystem', [PdfDownloadController::class, 'downloadProjectSystem'])->name('downloadProjectSystem');
+Route::get('/downloadProjectNetwork', [PdfDownloadController::class, 'downloadProjectNetwork'])->name('downloadProjectNetwork');
