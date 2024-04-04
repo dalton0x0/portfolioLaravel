@@ -7,13 +7,24 @@ use Illuminate\Support\Facades\Storage;
 
 class PdfDownloadController extends Controller
 {
+    /* CV PDF */
     public function downloadCv () {
-        return Storage::download('public/pdf/cv/cv-cheridanh-tsiela.pdf', 'CV Chéridanh TSIELA');
+        return Storage::download('public/pdf/cv/cv-cheridanh-tsiela.pdf', 'CV_Chéridanh_TSIELA');
+    }
+
+    /* System PDF */
+    public function donwloadSheetSytem () {
+        return Storage::download('public/pdf/bts/system/fiche-projet-systeme.pdf', 'Fiche_Projet_Système_Chéridanh');
     }
     public function downloadProjectSystemSamba () {
-        return Storage::download('public/pdf/bts/system/samba.pdf', 'Projet Système Chéridanh');
+        return Storage::download('public/pdf/bts/system/samba.pdf', 'SAMBA_AD_Chéridanh');
+    }
+
+    /* Network PDF */
+    public function donwloadSheetNetwork () {
+        return Storage::download('public/pdf/bts/network/fiche-projet-reseau.pdf', 'Fiche_Projet_Réseau_Chéridanh');
     }
     public function downloadProjectNetwork () {
-        return Storage::download('public/pdf/bts/network/project-network.pdf', 'Projet Réseau Chéridanh');
+        return Storage::download('public/pdf/system/network/project-network.pdf', 'Projet Réseau Chéridanh');
     }
 }

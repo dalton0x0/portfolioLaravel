@@ -44,14 +44,14 @@
                             'class' => 'col-md-6 mb-3' ,
                             'cover' => 'projects/cover-reseau.png',
                             'title' => 'Système',
-                            'path' => 'network.index',
+                            'path' => 'system.index',
                             'category' => 'Linux'
                         ])
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
                             'cover' => 'projects/cover-systeme.png',
                             'title' => 'Réseau',
-                            'path' => 'system.index',
+                            'path' => 'network.index',
                             'category' => 'MikroTik'
                         ])
                     </div>

@@ -7,6 +7,8 @@ use App\Http\Controllers\App\AppController;
 use App\Http\Controllers\App\ApprenticeshipsController;
 use App\Http\Controllers\App\InternshipsController;
 use App\Http\Controllers\App\PdfDownloadController;
+use App\Http\Controllers\App\ProjectNetworkController;
+use App\Http\Controllers\App\ProjectSystemController;
 use App\Http\Controllers\App\TpController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,10 +43,10 @@ Route::prefix('projects')->name('projects.')->group( function () {
         Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
     });
     Route::prefix('system')->name('system.')->group( function () {
-        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
+        Route::get('/', [ProjectSystemController::class, 'index'])->name('index');
     });
     Route::prefix('network')->name('network.')->group( function () {
-        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
+        Route::get('/', [ProjectNetworkController::class, 'index'])->name('index');
     });
     Route::prefix('tp')->name('tp.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
@@ -57,5 +59,9 @@ Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
 
 Route::get('/downloadCv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
+
+Route::get('/donwloadSheetSytem', [PdfDownloadController::class, 'donwloadSheetSytem'])->name('donwloadSheetSytem');
 Route::get('/downloadProjectSystemSamba', [PdfDownloadController::class, 'downloadProjectSystemSamba'])->name('downloadProjectSystemSamba');
+
+Route::get('/donwloadSheetNetwork', [PdfDownloadController::class, 'donwloadSheetNetwork'])->name('donwloadSheetNetwork');
 Route::get('/downloadProjectNetwork', [PdfDownloadController::class, 'downloadProjectNetwork'])->name('downloadProjectNetwork');
