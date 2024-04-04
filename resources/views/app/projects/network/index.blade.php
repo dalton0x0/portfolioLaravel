@@ -6,7 +6,7 @@
     <div class="container px-4 my-5">
         <!-- Titre  -->
         <div class="text-center mb-5">
-            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">@yield('title')</span></h1>
+            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Epreuve E5<br>Projet Réseau</span></h1>
         </div>
         <!-- Projet Réseau -->
         <div class="row gx-5 justify-content-center">
