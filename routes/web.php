@@ -58,10 +58,10 @@ Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
 
-Route::get('/downloadCv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
+Route::get('/cv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
 
-Route::get('/donwloadSheetSytem', [PdfDownloadController::class, 'donwloadSheetSytem'])->name('donwloadSheetSytem');
-Route::get('/downloadProjectSystemSamba', [PdfDownloadController::class, 'downloadProjectSystemSamba'])->name('downloadProjectSystemSamba');
+Route::get('/sheet-system', [PdfDownloadController::class, 'donwloadSheetSytem'])->name('sheet-system');
+Route::get('/samba', [PdfDownloadController::class, 'downloadProjectSystemSamba'])->name('samba');
 
-Route::get('/donwloadSheetNetwork', [PdfDownloadController::class, 'donwloadSheetNetwork'])->name('donwloadSheetNetwork');
+Route::get('/sheet-network', [PdfDownloadController::class, 'donwloadSheetNetwork'])->name('sheet-network');
 Route::get('/downloadProjectNetwork', [PdfDownloadController::class, 'downloadProjectNetwork'])->name('downloadProjectNetwork');
