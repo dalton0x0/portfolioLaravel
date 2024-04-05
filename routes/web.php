@@ -59,6 +59,7 @@ Route::prefix('projects')->name('projects.')->group( function () {
 Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');
 Route::get('/trainings/cv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
 Route::get('/skills', [AppController::class, 'skills'])->name('skills');
+Route::get('/skills/summary', [PdfDownloadController::class, 'downloadSummary'])->name('summary');
 Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');

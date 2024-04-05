@@ -12,6 +12,10 @@ class PdfDownloadController extends Controller
         return Storage::download('public/pdf/cv/cv-cheridanh-tsiela.pdf', 'CV_Chéridanh_TSIELA.pdf');
     }
 
+    public function downloadSummary () {
+        return Storage::download('public/pdf/skills/tableau_synthese_cheridanh.pdf', 'Tableau_de_Synthese_Chéridanh.pdf');
+    }
+
     /* System PDF */
     public function donwloadSheetSytem () {
         return Storage::download('public/pdf/bts/system/fiche-projet-systeme.pdf', 'Fiche_Projet_Système_Chéridanh.pdf');

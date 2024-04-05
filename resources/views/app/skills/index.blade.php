@@ -12,6 +12,13 @@
             <!-- Compétences -->
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="text-primary fw-bolder mb-0">Tableau de synthèse</h2>
+                        <!-- Mon CV -->
+                        <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('summary') }}">
+                            @include('partials.icon', ['class' => 'd-inline-block bi-download'])
+                        </a>
+                    </div>
                     <div class="card shadow border-0 rounded-4">
                         <div class="card-body p-5">
                             <!-- Listes des compétences en Systeme & Réseau -->
