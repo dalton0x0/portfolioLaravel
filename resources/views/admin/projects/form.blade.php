@@ -15,8 +15,19 @@
                     <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
-                        @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
-                        @include('partials.input', ['type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
+
+                        @if($project->exists)
+                            @include('partials.input', ['value' => $project->title,'name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
+                            @include('partials.input', ['value' => $project->content,'type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
+                            @include('partials.input', ['type' => 'file', 'name' => 'cover', 'label' => 'Cover du projet', 'placeholder' => 'cover'])
+                            <div class="p-2">
+                                <img src="/images/{{ $project->id }}" alt="cover">
+                            </div>
+                        @else
+                            @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
+                            @include('partials.input', ['type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
+                            @include('partials.input', ['type' => 'file', 'name' => 'cover', 'label' => 'Cover du projet', 'placeholder' => 'cover'])
+                        @endif
                         <div>
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>

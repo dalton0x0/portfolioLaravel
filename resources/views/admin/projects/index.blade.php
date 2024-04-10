@@ -14,6 +14,7 @@
 
             <thead>
             <tr>
+                <th>Cover</th>
                 <th>Nom</th>
                 <th class="text-end text-align-left">Action</th>
             </tr>
@@ -22,6 +23,7 @@
             <tbody>
             @foreach($projects as $project)
                 <tr>
+                    <td><img src="cover/{{ $project->cover }}" width="100px" alt=""></td>
                     <td>{{ $project->title }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">

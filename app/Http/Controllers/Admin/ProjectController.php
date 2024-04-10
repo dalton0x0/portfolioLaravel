@@ -35,7 +35,18 @@ class ProjectController extends Controller
      */
     public function store(ProjectFormRequest $request)
     {
-        $project = Project::create($request->validated());
+        $input = $request->all();
+
+        if ($request->hasfile('cover')) {
+            $cover = $request->file('cover');
+            $coverName = date('YmdHis') . "." . $cover->getClientOriginalExtension();
+            $destinationPath = storage_path('public/covers');
+            $cover->move($destinationPath, $coverName);
+            $input['cover'] = $coverName;
+        }
+
+        Project::create($input);
+
         return to_route('admin.projects.index')->with('success', 'Le projet a été crée avec succès !');
     }
 
@@ -62,7 +73,19 @@ class ProjectController extends Controller
      */
     public function update(ProjectFormRequest $request, Project $project)
     {
-        $project->update($request->validated());
+        $input = $request->all();
+
+        if ($cover = $request->file('cover')) {
+            $destinationPath = app_path('public/covers');
+            $coverName = date('YmdHis') . "." . $cover->getClientOriginalExtension();
+            $cover->move($destinationPath, $coverName);
+            $input['cover'] = $coverName;
+        } else {
+            unset($project['cover']);
+        }
+
+        $project->update($input);
+
         return to_route('admin.projects.index')->with('success', 'Le projet a été modifié avec succès !');
     }
 

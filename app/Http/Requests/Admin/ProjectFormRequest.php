@@ -23,7 +23,7 @@ class ProjectFormRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
         ];
     }
 
@@ -37,6 +37,7 @@ class ProjectFormRequest extends FormRequest
         return [
             'title.required' => 'Un titre est requis.',
             'content.required' => 'Un contenu est requis.',
+            'cover.required' => 'Un cover est requis.',
         ];
     }
 }
