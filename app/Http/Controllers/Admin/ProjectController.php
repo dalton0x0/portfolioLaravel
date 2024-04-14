@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProjectFormRequest;
 use App\Models\Admin\Project;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -35,17 +37,26 @@ class ProjectController extends Controller
      */
     public function store(ProjectFormRequest $request)
     {
+        $data = $request->validated();
+        $cover = $request->validated('cover');
+        $data['cover'] = $cover->store('covers', 'public');
+        $project = Project::create($request->validated());
+
+        /*
         $input = $request->all();
 
         if ($request->hasfile('cover')) {
-            $cover = $request->file('cover');
-            $coverName = date('YmdHis') . "." . $cover->getClientOriginalExtension();
-            $destinationPath = storage_path('public/covers');
-            $cover->move($destinationPath, $coverName);
-            $input['cover'] = $coverName;
-        }
+            $file = $request->file('cover');
+            $coverName = time() . '-' . $file->getClientOriginalName();
+            $file->move(public_path() . '/covers/', $coverName);
 
-        Project::create($input);
+            $project = Project::create([
+                'title' => $input['title'],
+                'content' => $input['content'],
+                'cover' => $coverName,
+            ]);
+        }
+        */
 
         return to_route('admin.projects.index')->with('success', 'Le projet a été crée avec succès !');
     }
@@ -73,19 +84,30 @@ class ProjectController extends Controller
      */
     public function update(ProjectFormRequest $request, Project $project)
     {
-        $input = $request->all();
-
-        if ($cover = $request->file('cover')) {
-            $destinationPath = app_path('public/covers');
-            $coverName = date('YmdHis') . "." . $cover->getClientOriginalExtension();
-            $cover->move($destinationPath, $coverName);
-            $input['cover'] = $coverName;
-        } else {
-            unset($project['cover']);
+        $data = $request->validated();
+        $cover = $request->validated('cover');
+        if ($cover !== null && !$cover->getError()) {
+            $data['cover'] = $cover->store('covers', 'public');
         }
+        $project->update($data);
 
-        $project->update($input);
+        /*
+        if ($request->hasfile('cover')) {
+            $file = $request->file('cover');
+            $project->cover = time() . '-' . $file->getClientOriginalName();
+            if (Storage::exists('/cover/' . $project->cover)) {
+                Storage::delete('/cover/' . $project->cover);
+            }
+            $file->move(public_path() . '/covers/', $project->cover);
+            $request['cover'] = $project->cover;
 
+            $project->update([
+                'title' => $request['title'],
+                'content' => $request['content'],
+                'cover' => $project->cover,
+            ]);
+        }
+        */
         return to_route('admin.projects.index')->with('success', 'Le projet a été modifié avec succès !');
     }
 
@@ -94,6 +116,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        if (Storage::exists('/cover/' . $project->cover)) {
+            Storage::delete('/cover/' . $project->cover);
+        }
+
         $project->delete();
         return to_route('admin.projects.index')->with('danger', "Le projet a été supprimé avec succès");
     }

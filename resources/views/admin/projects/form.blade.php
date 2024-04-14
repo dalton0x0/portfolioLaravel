@@ -12,7 +12,7 @@
                             <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un project' }}</span>
                         </h1>
                     </div>
-                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent">
+                    <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent" enctype="multipart/form-data">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
 
@@ -21,7 +21,7 @@
                             @include('partials.input', ['value' => $project->content,'type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])
                             @include('partials.input', ['type' => 'file', 'name' => 'cover', 'label' => 'Cover du projet', 'placeholder' => 'cover'])
                             <div class="p-2">
-                                <img src="/images/{{ $project->id }}" alt="cover">
+                                <img src="/covers/{{ $project->cover }}" class="image-fluid" width="500px" alt="cover">
                             </div>
                         @else
                             @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
@@ -70,22 +70,63 @@
             autoresize_bottom_margin: 0,
             link_default_target: '_blank',
             language: 'fr_FR',
-            file_picker_callback: (callback, value, meta) => {
-                // Provide file and text for the link dialog
-                if (meta.filetype == 'file') {
-                    callback('mypage.html', { text: 'My text' });
-                }
+            image_title: true,
+            automatic_uploads: true,
+            images_upload_url: '/upload',
+            file_picker_types: 'image',
+            file_picker_callback: function(cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.onchange = function() {
+                    var file = this.files[0];
 
-                // Provide image and alt text for the image dialog
-                if (meta.filetype == 'image') {
-                    callback('myimage.jpg', { alt: 'My alt text' });
-                }
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                };
+                input.click();
+            },
+            images_upload_url : 'upload.php',
+            automatic_uploads : false,
 
-                // Provide alternative source and posted for the media dialog
-                if (meta.filetype == 'media') {
-                    callback('movie.mp4', { source2: 'alt.ogg', poster: 'image.jpg' });
-                }
-            }
+            images_upload_handler : function(blobInfo, success, failure) {
+                var xhr, formData;
+
+                xhr = new XMLHttpRequest();
+                xhr.withCredentials = false;
+                xhr.open('POST', 'upload.php');
+
+                xhr.onload = function() {
+                    var json;
+
+                    if (xhr.status != 200) {
+                        failure('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+
+                    json = JSON.parse(xhr.responseText);
+
+                    if (!json || typeof json.file_path != 'string') {
+                        failure('Invalid JSON: ' + xhr.responseText);
+                        return;
+                    }
+
+                    success(json.file_path);
+                };
+
+                formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+                xhr.send(formData);
+            },
         });
 
         document.getElementById('ProjectContent').addEventListener('submit', function(event) {
