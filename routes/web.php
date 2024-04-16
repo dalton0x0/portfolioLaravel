@@ -46,6 +46,10 @@ Route::prefix('projects')->name('projects.')->group( function () {
         Route::get('/', [ProjectSystemController::class, 'index'])->name('index');
         Route::get('/sheet', [PdfDownloadController::class, 'donwloadSheetSytem'])->name('sheet');
         Route::get('/samba', [PdfDownloadController::class, 'downloadProjectSystemSamba'])->name('samba');
+        Route::get('/glpi', [PdfDownloadController::class, 'downloadProjectSystemGlpi'])->name('glpi');
+        Route::get('/zabbix', [PdfDownloadController::class, 'downloadProjectSystemZabbix'])->name('zabbix');
+        Route::get('/glpi-agent', [PdfDownloadController::class, 'downloadProjectSystemGlpiAgent'])->name('glpi-agent');
+        Route::get('/zabbix-agent', [PdfDownloadController::class, 'downloadProjectSystemZabbixAgent'])->name('zabbix-agent');
     });
     Route::prefix('network')->name('network.')->group( function () {
         Route::get('/', [ProjectNetworkController::class, 'index'])->name('index');

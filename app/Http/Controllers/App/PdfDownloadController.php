@@ -21,7 +21,19 @@ class PdfDownloadController extends Controller
         return Storage::download('public/pdf/bts/system/fiche-projet-systeme.pdf', 'Fiche_Projet_Système_Chéridanh.pdf');
     }
     public function downloadProjectSystemSamba () {
-        return Storage::download('public/pdf/bts/system/samba.pdf', 'SAMBA_AD_Chéridanh.pdf');
+        return Storage::download('public/pdf/bts/system/samba.pdf', 'Installation_SAMBA_AD_Chéridanh.pdf');
+    }
+    public function downloadProjectSystemGlpi () {
+        return Storage::download('public/pdf/bts/system/glpi.pdf', 'Installation_GLPI_Chéridanh.pdf');
+    }
+    public function downloadProjectSystemZabbix () {
+        return Storage::download('public/pdf/bts/system/zabbix.pdf', 'Installation_ZABBIX_Chéridanh.pdf');
+    }
+    public function downloadProjectSystemGlpiAgent () {
+        return Storage::download('public/pdf/bts/system/glpi-agent.pdf', 'Installtion_Agent_GLPI_Chéridanh.pdf');
+    }
+    public function downloadProjectSystemZabbixAgent () {
+        return Storage::download('public/pdf/bts/system/zabbix-agent.pdf', 'Installtion_Agent_ZABBIX_Chéridanh.pdf');
     }
 
     /* Network PDF */

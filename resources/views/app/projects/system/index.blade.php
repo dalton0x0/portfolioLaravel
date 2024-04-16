@@ -76,25 +76,25 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
-                                            Partie B : DHCP
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi') }}">
+                                            Partie B : GLPI
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
-                                            Partie C : GLPI & GPO
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix') }}">
+                                            Partie C : ZABBIX
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
-                                            Partie D : ZABBIX & GPO
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi-agent') }}">
+                                            Partie D : Agent GLPI
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
-                                            Télécharger tout en un
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix-agent') }}">
+                                            Partie E : Agent ZABBIX
                                         </a>
                                     </div>
                                 </div>

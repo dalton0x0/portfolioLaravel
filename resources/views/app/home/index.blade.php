@@ -25,7 +25,7 @@
                 <div class="col-xxl-7">
                     <div class="d-flex justify-content-center mt-5 mt-xxl-0">
                         <div class="profile bg-gradient-primary-to-secondary">
-                             <img class="profile-img" src="{{ asset('assets/images/cheridanh/profile-mod.png') }}" alt="Chéridanh TSIELA"/>
+                             <img class="profile-img" src="{{ asset('assets/images/cheridanh/hd.png') }}" alt="Chéridanh TSIELA"/>
                             <div class="dots-1">
                                 <!-- SVG Dots-->
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
