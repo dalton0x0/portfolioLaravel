@@ -41,6 +41,17 @@ class PdfDownloadController extends Controller
         return Storage::download('public/pdf/bts/network/fiche-projet-reseau.pdf', 'Fiche_Projet_Réseau_Chéridanh.pdf');
     }
     public function downloadProjectNetwork () {
-        return Storage::download('public/pdf/system/network/project-network.pdf', 'Projet Réseau Chéridanh.pdf');
+        return Storage::download('public/pdf/system/network/project-network.pdf', 'Projet_Réseau_Chéridanh.pdf');
+    }
+
+    /* TP */
+    /* Windows Server PDF */
+    public function downloadAdds () {
+        return Storage::download('public/pdf/tp/windows-server/ad-ds.pdf', 'Installation_Active_Directory_Chéridanh.pdf');
+    }
+
+    /* Linux */
+    public function downloadLamp () {
+        return Storage::download('public/pdf/tp/linux/lamp.pdf', 'Installation_LAMP_Chéridanh.pdf');
     }
 }

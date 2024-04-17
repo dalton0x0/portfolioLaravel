@@ -58,6 +58,12 @@ Route::prefix('projects')->name('projects.')->group( function () {
     });
     Route::prefix('tp')->name('tp.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
+        Route::prefix('windows-server')->name('windows-server.')->group( function () {
+            Route::get('/ad-ds', [PdfDownloadController::class, 'downloadAdds'])->name('ad-ds');
+        });
+        Route::prefix('linux')->name('linux.')->group( function () {
+            Route::get('/lamp', [PdfDownloadController::class, 'downloadLamp'])->name('lamp');
+        });
     });
 });
 Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');

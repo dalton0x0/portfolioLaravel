@@ -14,7 +14,7 @@
                 'cover' => 'internships/home/Tunnel-EOIP.png',
                 'title' => 'Active Directory & DNS',
                 'description' => "Gestion des utilisateurs et résolution des noms de domaine avec Microsoft AD et DNS.",
-                'path' => 'internships.vpn-ipsec-pfsense',
+                'path' => 'tp.windows-server.ad-ds',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
@@ -75,7 +75,7 @@
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'LAMP',
                 'description' => "Installer Apache2, MariaDB et la dernière version de PHP sur votre serveur linux.",
-                'path' => 'internships.ocs-inventory',
+                'path' => 'tp.linux.lamp',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
