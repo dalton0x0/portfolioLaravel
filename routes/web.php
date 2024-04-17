@@ -60,9 +60,27 @@ Route::prefix('projects')->name('projects.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
         Route::prefix('windows-server')->name('windows-server.')->group( function () {
             Route::get('/ad-ds', [PdfDownloadController::class, 'downloadAdds'])->name('ad-ds');
+            Route::get('/dhcp', [PdfDownloadController::class, 'downloadDhcp'])->name('dhcp');
+            Route::get('/iis', [PdfDownloadController::class, 'downloadIis'])->name('iis');
+            Route::get('/wds', [PdfDownloadController::class, 'downloadWds'])->name('wds');
+            Route::get('/tse', [PdfDownloadController::class, 'downloadTse'])->name('tse');
+            Route::get('/vpn', [PdfDownloadController::class, 'downloadVpn'])->name('vpn');
         });
         Route::prefix('linux')->name('linux.')->group( function () {
+            Route::get('/bind', [PdfDownloadController::class, 'downloadBind'])->name('bind');
             Route::get('/lamp', [PdfDownloadController::class, 'downloadLamp'])->name('lamp');
+            Route::get('/bookstack', [PdfDownloadController::class, 'downloadBookstack'])->name('bookstack');
+            Route::get('/nextcloud', [PdfDownloadController::class, 'downloadNextcloud'])->name('nextcloud');
+            Route::get('/free-ipa', [PdfDownloadController::class, 'downloadFreeipa'])->name('free-ipa');
+        });
+        Route::prefix('inventoring-monitoring')->name('inventoring-monitoring.')->group( function () {
+            Route::get('/ocs', [PdfDownloadController::class, 'downloadOcs'])->name('ocs');
+            Route::get('/glpi', [PdfDownloadController::class, 'downloadGlpi'])->name('glpi');
+            Route::get('/zabix', [PdfDownloadController::class, 'downloadZabbix'])->name('zabbix');
+        });
+        Route::prefix('pfsense')->name('pfsense.')->group( function () {
+            Route::get('/carp', [PdfDownloadController::class, 'downloadCarp'])->name('carp');
+            Route::get('/nat', [PdfDownloadController::class, 'downloadNat'])->name('nat');
         });
     });
 });

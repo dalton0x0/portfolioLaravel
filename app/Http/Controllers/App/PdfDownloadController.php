@@ -49,9 +49,55 @@ class PdfDownloadController extends Controller
     public function downloadAdds () {
         return Storage::download('public/pdf/tp/windows-server/ad-ds.pdf', 'Installation_Active_Directory_Chéridanh.pdf');
     }
+    public function downloadDhcp () {
+        return Storage::download('public/pdf/tp/windows-server/dhcp.pdf', 'Installation_AD-DNS_Chéridanh.pdf');
+    }
+    public function downloadIis () {
+        return Storage::download('public/pdf/tp/windows-server/iis.pdf', 'Installation_Web_IIS_Chéridanh.pdf');
+    }
+    public function downloadWds () {
+        return Storage::download('public/pdf/tp/windows-server/wds.pdf', 'Installation_Web_IIS_Chéridanh.pdf');
+    }
+    public function downloadTse () {
+        return Storage::download('public/pdf/tp/windows-server/tse.pdf', 'Installation_TSE_Chéridanh.pdf');
+    }
+    public function downloadVpn () {
+        return Storage::download('public/pdf/tp/windows-server/vpn.pdf', 'Installation_TSE_Chéridanh.pdf');
+    }
 
     /* Linux */
+    public function downloadBind () {
+        return Storage::download('public/pdf/tp/linux/bind.pdf', 'Installation_Bind_Chéridanh.pdf');
+    }
     public function downloadLamp () {
         return Storage::download('public/pdf/tp/linux/lamp.pdf', 'Installation_LAMP_Chéridanh.pdf');
+    }
+    public function downloadBookstack () {
+        return Storage::download('public/pdf/tp/linux/bookstack.pdf', 'Installation_Bookstack_Chéridanh.pdf');
+    }
+    public function downloadNextcloud () {
+        return Storage::download('public/pdf/tp/linux/nextcloud.pdf', 'Installation_Nextcloud_Chéridanh.pdf');
+    }
+    public function downloadFreeipa () {
+        return Storage::download('public/pdf/tp/linux/free-ipa.pdf', 'Installation_Free-IPA_Chéridanh.pdf');
+    }
+
+    /* Inventoring & Monitoring */
+    public function downloadOcs () {
+        return Storage::download('public/pdf/tp/inventoring-monitoring/ocs.pdf', 'Installation_OCS_Chéridanh.pdf');
+    }
+    public function downloadGlpi () {
+        return Storage::download('public/pdf/tp/inventoring-monitoring/glpi.pdf', 'Installation_GLPI_Chéridanh.pdf');
+    }
+    public function downloadZabbix () {
+        return Storage::download('public/pdf/tp/inventoring-monitoring/zabbix.pdf', 'Installation_ZABBIX_Chéridanh.pdf');
+    }
+
+    /* Pfsense */
+    public function downloadCarp () {
+        return Storage::download('public/pdf/tp/pfsense/carp.pdf', 'Installation_CARP_Chéridanh.pdf');
+    }
+    public function downloadNat () {
+        return Storage::download('public/pdf/tp/pfsense/nat.pdf', 'Règles_NAT_Chéridanh.pdf');
     }
 }

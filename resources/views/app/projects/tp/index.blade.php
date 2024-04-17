@@ -21,28 +21,28 @@
                 'cover' => 'internships/home/Tunnel-IPsec.png',
                 'title' => 'Serveur DHCP',
                 'description' => "Attribution dynamique des configurations réseau sur des postes clients avec le service DHCP.",
-                'path' => 'internships.vpn-ipsec-pfsense',
+                //'path' => 'tp.windows-server.dhcp',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/OCS.png',
                 'title' => 'Serveur Web IIS',
                 'description' => "Mettre en place un service web interne pour la visibilté de l'entreprise et autre.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.windows-server.iis',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Serveur WDS',
                 'description' => "Déploiement d'images d'installtion des systèmes d'exploitation par le réseau.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.windows-server.wds',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Serveur TSE',
                 'description' => "Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.windows-server.tse',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
@@ -50,7 +50,7 @@
                 'title' => 'Serveur VPN PPTP et L2TP',
                 'description' => "Etablir une connexion distante sécurisée entre un utilisateur et les services internes de
                 l'entreprise.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.windows-server.vpn',
                 'category' => 'Windows Server'
             ])
         </div>
@@ -68,7 +68,7 @@
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Bind (DNS)',
                 'description' => "Mettre en place la résolutuion des noms de domaines sur un serveur Linux.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.linux.bind',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
@@ -82,21 +82,21 @@
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Bookstack',
                 'description' => "Logiciel OpenSource nécessaire pour vos documentations sous forme de Wiki.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.linux.bookstack',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Nextcloud',
                 'description' => "Logiciel OpenSource avec interface graphique web pour l'hébergement de vos fichiers.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.linux.nextcloud',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Free IPA',
                 'description' => "Système de gestion d'identité gratuit et open source.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.linux.free-ipa',
                 'category' => 'Rocky Linux'
             ])
         </div>
@@ -115,21 +115,21 @@
                 'title' => 'OCS Inventoring NG',
                 'description' => "Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
                 informatique.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.inventoring-monitoring.ocs',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'GLPI',
                 'description' => "Logiciel libre de gestion des services informatiques et de gestion des services d'assistance.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.inventoring-monitoring.glpi',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'ZABBIX',
                 'description' => "Logiciel libre permettant de surveiller l'état de divers services réseau, serveurs et autres.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.inventoring-monitoring.zabbix',
                 'category' => 'Debian'
             ])
         </div>
@@ -148,14 +148,14 @@
                 'title' => 'HRSP (CARP)',
                 'description' => "Redondance de deux routeurs actifs pour assurer la haute disponibilté et la continuité des
                 services.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.pfsense.carp',
                 'category' => 'Pfsense'
             ])
             @include('partials.card', [
                 'cover' => 'internships/home/PXE.png',
                 'title' => 'Règle NAT',
                 'description' => "Assurer la translation des adresses IP de votre réseau interne.",
-                'path' => 'internships.ocs-inventory',
+                //'path' => 'tp.pfsense.nat',
                 'category' => 'Pfsense'
             ])
         </div>
