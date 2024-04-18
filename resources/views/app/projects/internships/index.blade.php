@@ -24,7 +24,7 @@
                     'category' => 'Pfsense'
                 ])
                 @include('partials.card', [
-                    'cover' => 'internships/home/OCS.png',
+                    'cover' => 'internships/home/ocs.png',
                     'title' => 'OCS Inventory NG sous Debian 12',
                     'description' => "Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
                     informatique.",

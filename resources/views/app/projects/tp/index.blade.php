@@ -11,42 +11,42 @@
         <!-- Contenu Windows Server -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @include('partials.card', [
-                'cover' => 'internships/home/Tunnel-EOIP.png',
+                'cover' => 'tp/ad-ds.png',
                 'title' => 'Active Directory & DNS',
                 'description' => "Gestion des utilisateurs et résolution des noms de domaine avec Microsoft AD et DNS.",
                 'path' => 'tp.windows-server.ad-ds',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/Tunnel-IPsec.png',
+                'cover' => 'tp/dhcp.png',
                 'title' => 'Serveur DHCP',
                 'description' => "Attribution dynamique des configurations réseau sur des postes clients avec le service DHCP.",
                 //'path' => 'tp.windows-server.dhcp',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/OCS.png',
+                'cover' => 'tp/iis.png',
                 'title' => 'Serveur Web IIS',
                 'description' => "Mettre en place un service web interne pour la visibilté de l'entreprise et autre.",
                 //'path' => 'tp.windows-server.iis',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/wds.png',
                 'title' => 'Serveur WDS',
                 'description' => "Déploiement d'images d'installtion des systèmes d'exploitation par le réseau.",
                 //'path' => 'tp.windows-server.wds',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/tse.png',
                 'title' => 'Serveur TSE',
                 'description' => "Découvrez un autre moyen simple et efficace d'installer les OS par le réseau.",
                 //'path' => 'tp.windows-server.tse',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/vpn.png',
                 'title' => 'Serveur VPN PPTP et L2TP',
                 'description' => "Etablir une connexion distante sécurisée entre un utilisateur et les services internes de
                 l'entreprise.",
@@ -65,35 +65,35 @@
         <!-- Contenu Linux -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/bind.png',
                 'title' => 'Bind (DNS)',
                 'description' => "Mettre en place la résolutuion des noms de domaines sur un serveur Linux.",
                 //'path' => 'tp.linux.bind',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/lamp.png',
                 'title' => 'LAMP',
                 'description' => "Installer Apache2, MariaDB et la dernière version de PHP sur votre serveur linux.",
                 'path' => 'tp.linux.lamp',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/bookstack.png',
                 'title' => 'Bookstack',
                 'description' => "Logiciel OpenSource nécessaire pour vos documentations sous forme de Wiki.",
                 //'path' => 'tp.linux.bookstack',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/nextcloud.png',
                 'title' => 'Nextcloud',
                 'description' => "Logiciel OpenSource avec interface graphique web pour l'hébergement de vos fichiers.",
                 //'path' => 'tp.linux.nextcloud',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/free-ipa.png',
                 'title' => 'Free IPA',
                 'description' => "Système de gestion d'identité gratuit et open source.",
                 //'path' => 'tp.linux.free-ipa',
@@ -111,7 +111,7 @@
         <!-- Contenu Inventoring et Monitoring -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/ocs.png',
                 'title' => 'OCS Inventoring NG',
                 'description' => "Outils d'inventoring libre OpenSource que vous pouvez utiliser pour gérer votre parc
                 informatique.",
@@ -119,14 +119,14 @@
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/glpi.png',
                 'title' => 'GLPI',
                 'description' => "Logiciel libre de gestion des services informatiques et de gestion des services d'assistance.",
                 //'path' => 'tp.inventoring-monitoring.glpi',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/zabbix.png',
                 'title' => 'ZABBIX',
                 'description' => "Logiciel libre permettant de surveiller l'état de divers services réseau, serveurs et autres.",
                 //'path' => 'tp.inventoring-monitoring.zabbix',
@@ -144,7 +144,7 @@
         <!-- Contenu Pfsense -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/carp.png',
                 'title' => 'HRSP (CARP)',
                 'description' => "Redondance de deux routeurs actifs pour assurer la haute disponibilté et la continuité des
                 services.",
@@ -152,7 +152,7 @@
                 'category' => 'Pfsense'
             ])
             @include('partials.card', [
-                'cover' => 'internships/home/PXE.png',
+                'cover' => 'tp/pfsense.png',
                 'title' => 'Règle NAT',
                 'description' => "Assurer la translation des adresses IP de votre réseau interne.",
                 //'path' => 'tp.pfsense.nat',
