@@ -21,14 +21,14 @@
                 'cover' => 'tp/dhcp.png',
                 'title' => 'Serveur DHCP',
                 'description' => "Attribution dynamique des configurations réseau sur des postes clients avec le service DHCP.",
-                //'path' => 'tp.windows-server.dhcp',
+                'path' => 'tp.windows-server.dhcp',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
                 'cover' => 'tp/iis.png',
                 'title' => 'Serveur Web IIS',
                 'description' => "Mettre en place un service web interne pour la visibilté de l'entreprise et autre.",
-                //'path' => 'tp.windows-server.iis',
+                'path' => 'tp.windows-server.iis',
                 'category' => 'Windows Server'
             ])
             @include('partials.card', [
@@ -50,7 +50,7 @@
                 'title' => 'Serveur VPN PPTP et L2TP',
                 'description' => "Etablir une connexion distante sécurisée entre un utilisateur et les services internes de
                 l'entreprise.",
-                //'path' => 'tp.windows-server.vpn',
+                'path' => 'tp.windows-server.vpn',
                 'category' => 'Windows Server'
             ])
         </div>
@@ -122,14 +122,14 @@
                 'cover' => 'tp/glpi.png',
                 'title' => 'GLPI',
                 'description' => "Logiciel libre de gestion des services informatiques et de gestion des services d'assistance.",
-                //'path' => 'tp.inventoring-monitoring.glpi',
+                'path' => 'tp.inventoring-monitoring.glpi',
                 'category' => 'Debian'
             ])
             @include('partials.card', [
                 'cover' => 'tp/zabbix.png',
                 'title' => 'ZABBIX',
                 'description' => "Logiciel libre permettant de surveiller l'état de divers services réseau, serveurs et autres.",
-                //'path' => 'tp.inventoring-monitoring.zabbix',
+                'path' => 'tp.inventoring-monitoring.zabbix',
                 'category' => 'Debian'
             ])
         </div>
