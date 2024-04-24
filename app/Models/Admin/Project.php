@@ -4,6 +4,7 @@ namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Project extends Model
 {
@@ -11,7 +12,12 @@ class Project extends Model
 
     protected $fillable = [
         'title',
-        'content',
+        //'content',
         'cover',
     ];
+
+    public function getCoverUrl(): string
+    {
+        return Storage::disk('public')->url($this->cover);
+    }
 }

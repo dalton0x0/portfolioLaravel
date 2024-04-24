@@ -23,7 +23,12 @@
             <tbody>
             @foreach($projects as $project)
                 <tr>
-                    <td><img src="/covers/{{ $project->cover }}" width="100px" alt=""></td>
+                    <td>
+                        @if($project->cover)
+                            <img src="{{ $project->getCoverUrl() }}" width="100px" alt="">
+                        @endif
+
+                    </td>
                     <td>{{ $project->title }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
