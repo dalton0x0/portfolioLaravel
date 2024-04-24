@@ -86,7 +86,9 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        Project::destroy($project->cover);
+        if ($project->cover) {
+            Storage::disk('public')->delete($project->cover);
+        }
         $project->delete();
         return to_route('admin.projects.index')->with('danger', "Le projet a été supprimé avec succès");
     }
