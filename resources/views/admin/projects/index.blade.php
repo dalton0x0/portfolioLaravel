@@ -6,28 +6,27 @@
     <div class="container py-5">
         @include('partials.flash')
         <div class="d-flex justify-content-between align-items-center">
-            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">@yield('title') : {{ $projects->count() }}</span></h1>
+            <h1 class="display-5 fw-bolder mb-0">
+                <span class="text-gradient d-inline">{{ Str::plural('Projet', $projects->count()) }} : {{ $projects->count() }}</span>
+            </h1>
             <a href="{{ route('admin.projects.create') }}" class="btn btn-outline-success me-2 rounded"><i class="bi-plus-circle"></i></a>
         </div>
         <hr>
         <table class="table table-striped">
-
-            <thead>
+            <thead class="table-dark">
             <tr>
                 <th>Cover</th>
                 <th>Nom</th>
                 <th class="text-end text-align-left">Action</th>
             </tr>
             </thead>
-
             <tbody>
             @foreach($projects as $project)
                 <tr>
                     <td>
                         @if($project->cover)
-                            <img src="{{ $project->getCoverUrl() }}" width="100px" alt="">
+                            <img class="rounded" src="{{ $project->getCoverUrl() }}" width="200px" alt="">
                         @endif
-
                     </td>
                     <td>{{ $project->title }}</td>
                     <td>
