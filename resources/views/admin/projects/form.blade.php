@@ -6,12 +6,12 @@
     <div class="my-5">
         <div class="container p-4">
             <div class="row justify-content-md-center">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder">
+                        <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un project' }}</span>
+                    </h1>
+                </div>
                 <div class="col-md-6">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder">
-                            <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un project' }}</span>
-                        </h1>
-                    </div>
                     <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent" enctype="multipart/form-data">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
@@ -21,7 +21,8 @@
                             {{--@include('partials.input', ['value' => $project->content,'type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])--}}
                             @include('partials.upload', ['name' => 'cover', 'label' => 'Cover du projet'])
                             <div class="p-2">
-                                <img src="/covers/{{ $project->cover }}" class="image-fluid" width="500px" alt="cover">
+                                <p>Actuel cover</p>
+                                <img src="{{ $project->getCoverUrl() }}" class="image-fluid mb-4 rounded" width="200px" alt="cover">
                             </div>
                         @else
                             @include('partials.input', ['name' => 'title', 'label' => 'Titre du projet', 'placeholder' => 'Titre du projet'])
