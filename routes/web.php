@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('projects', (ProjectController::class));
+    Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])->name('project.show')->where([
+        'project' => '[0-9a-zA-Z\-]+',
+    ]);
     Route::resource('categories', (CategoryController::class));
 });
 
