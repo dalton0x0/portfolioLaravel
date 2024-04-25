@@ -14,10 +14,15 @@ class Project extends Model
         'title',
         //'content',
         'cover',
+        'report',
     ];
 
     public function getCoverUrl(): string
     {
         return Storage::disk('public')->url($this->cover);
+    }
+    public function getReportUrl(): string
+    {
+        return Storage::disk('public')->url($this->report);
     }
 }

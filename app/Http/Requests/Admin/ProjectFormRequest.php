@@ -25,6 +25,7 @@ class ProjectFormRequest extends FormRequest
             'title' => 'required',
             //'content' => 'required',
             'cover' => 'image|max:2048',
+            'report' => 'required',
         ];
     }
 
@@ -38,6 +39,10 @@ class ProjectFormRequest extends FormRequest
         return [
             'title.required' => 'Un titre est requis.',
             //'content.required' => 'Un contenu est requis.',
+            'cover.image' => "Le fichier sélectionné n'est pas une image.",
+            'cover.max' => "La taille de l'image est trop grande",
+            'report.mimetypes' => "Le fichier sélectionné n'est pas un fichier pdf.",
+            'report.required' => "Un compte rendu est requis.",
         ];
     }
 }

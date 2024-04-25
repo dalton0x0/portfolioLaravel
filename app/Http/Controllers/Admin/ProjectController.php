@@ -71,13 +71,18 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $cover = $request->validated('cover');
+        $report = $request->validated('report');
         if ($cover == null || $cover->getError()) {
             return $data;
         }
         if ($project->cover) {
             Storage::disk('public')->delete($project->cover);
         }
+        if ($project->report) {
+            Storage::disk('public')->delete($project->report);
+        }
         $data['cover'] = $cover->store('covers', 'public');
+        $data['report'] = $report->store('reports', 'public');
         return $data;
     }
 
@@ -88,6 +93,9 @@ class ProjectController extends Controller
     {
         if ($project->cover) {
             Storage::disk('public')->delete($project->cover);
+        }
+        if ($project->report) {
+            Storage::disk('public')->delete($project->report);
         }
         $project->delete();
         return to_route('admin.projects.index')->with('danger', "Le projet a été supprimé avec succès");
