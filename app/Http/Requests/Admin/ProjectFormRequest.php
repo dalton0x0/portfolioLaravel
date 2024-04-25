@@ -25,7 +25,6 @@ class ProjectFormRequest extends FormRequest
         return [
             'title' => 'required',
             'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
-            //'content' => 'required',
             'cover' => 'image|max:2048',
             'description' => 'required',
             'report' => 'required',
@@ -41,7 +40,6 @@ class ProjectFormRequest extends FormRequest
     {
         return [
             'title.required' => 'Un titre est requis.',
-            //'content.required' => 'Un contenu est requis.',
             'cover.image' => "Le fichier sélectionné n'est pas une image.",
             'cover.max' => "La taille de l'image est trop grande",
             'description.required' => 'Une description est requise.',
