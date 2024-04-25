@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class ProjectFormRequest extends FormRequest
 {
@@ -23,8 +24,10 @@ class ProjectFormRequest extends FormRequest
     {
         return [
             'title' => 'required',
+            'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
             //'content' => 'required',
             'cover' => 'image|max:2048',
+            'description' => 'required',
             'report' => 'required',
         ];
     }
@@ -34,15 +37,22 @@ class ProjectFormRequest extends FormRequest
      *
      * @return array
      */
-    public function messages()
+    public function messages(): array
     {
         return [
             'title.required' => 'Un titre est requis.',
             //'content.required' => 'Un contenu est requis.',
             'cover.image' => "Le fichier sélectionné n'est pas une image.",
             'cover.max' => "La taille de l'image est trop grande",
-            'report.mimetypes' => "Le fichier sélectionné n'est pas un fichier pdf.",
+            'description.required' => 'Une description est requise.',
             'report.required' => "Un compte rendu est requis.",
         ];
+    }
+
+    protected function prepareForValidation(): void
+    {
+        $this->merge([
+            'slug' => Str::slug($this->input('title'))
+        ]);
     }
 }

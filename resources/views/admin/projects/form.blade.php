@@ -18,7 +18,7 @@
 
                         @if($project->exists)
                             @include('partials.input', ['value' => $project->title,'name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
-                            {{--@include('partials.input', ['value' => $project->content,'type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])--}}
+                            @include('partials.input', ['value' => $project->description,'type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
                             @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
                             <div class="p-2">
@@ -27,7 +27,7 @@
                             </div>
                         @else
                             @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
-                            {{--@include('partials.input', ['type' => 'textarea', 'name' => 'content', 'label' => 'Contenu', 'placeholder' => 'Contenu'])--}}
+                            @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
                             @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
                         @endif
