@@ -24,6 +24,7 @@
     @enderror
 
 </div>
+{{--
 
 <div @class(["form-floating mb-3", $class])>
 
@@ -42,3 +43,5 @@
     @enderror
 
 </div>
+--}}
+
