@@ -10,7 +10,7 @@ class TpController extends Controller
     public function index()
     {
         return view('app.projects.tp.index', [
-            'projects' => Project::all(),
+            'projects' => Project::with('category')->get(),
         ]);
     }
 }

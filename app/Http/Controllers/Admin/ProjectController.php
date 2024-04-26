@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProjectFormRequest;
+use App\Models\Admin\Category;
 use App\Models\Admin\Project;
 use Illuminate\Support\Facades\Storage;
 
@@ -28,6 +29,7 @@ class ProjectController extends Controller
 
         return view('admin.projects.form', [
             'project' =>$project,
+            'categories' => Category::select('id', 'name')->get(),
         ]);
     }
 

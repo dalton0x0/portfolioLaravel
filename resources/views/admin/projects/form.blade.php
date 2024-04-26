@@ -19,13 +19,14 @@
                         @if($project->exists)
                             @include('partials.input', ['value' => $project->title,'name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
                             @include('partials.input', ['value' => $project->description,'type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
-                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
+                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                         @else
                             @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
                             @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
-                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
+                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
+                            @include('partials.select', ['name' => 'category', 'label' => 'Categorie'])
                         @endif
                         <div class="mt-4">
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
