@@ -21,17 +21,13 @@
                             @include('partials.input', ['value' => $project->description,'type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
                             @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
-                            <div class="p-2">
-                                <p>Actuel cover</p>
-                                <img src="{{ $project->getCoverUrl() }}" class="image-fluid mb-4 rounded" width="200px" alt="cover">
-                            </div>
                         @else
                             @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
                             @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
                             @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
                         @endif
-                        <div class="mt-5">
+                        <div class="mt-4">
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>
                             </a>

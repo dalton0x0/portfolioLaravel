@@ -45,7 +45,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return Storage::disk('public')->url($project->report);
+        return response()->file(storage_path("app/public/").$project->report);
     }
 
     /**

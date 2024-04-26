@@ -11,7 +11,9 @@ use App\Http\Controllers\App\ProjectNetworkController;
 use App\Http\Controllers\App\ProjectSystemController;
 use App\Http\Controllers\App\TpController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
+URL::formatScheme('https');
 /*
 |--------------------------------------------------------------------------
 | Web Routes

@@ -25,7 +25,7 @@
                 <tr>
                     <td>
                         @if($project->cover)
-                            <img class="rounded" src="{{ $project->getCoverUrl() }}" width="200px" alt="">
+                            <img class="rounded" src="{{ $project->getCoverUrl() }}" width="150px" alt="">
                         @endif
                     </td>
                     <td>{{ $project->title }}</td>
