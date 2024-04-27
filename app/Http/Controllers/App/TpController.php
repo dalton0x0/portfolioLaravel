@@ -15,4 +15,9 @@ class TpController extends Controller
             'categories' => Category::all()
         ]);
     }
+
+    public function show(Project $project)
+    {
+        return response()->file(storage_path("app/public/").$project->report);
+    }
 }
