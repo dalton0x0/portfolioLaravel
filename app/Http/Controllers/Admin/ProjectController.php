@@ -36,7 +36,7 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProjectFormRequest $request)
+    public function store(ProjectFormRequest $request, Project $project)
     {
         $project = Project::create($this->extractData(new Project(), $request));
         return to_route('admin.projects.index')->with('success', 'Le projet a été crée avec succès !');
@@ -56,7 +56,8 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         return view('admin.projects.form', [
-            'project' => $project
+            'project' => $project,
+            'categories' => Category::select('id', 'name')->get(),
         ]);
     }
 
@@ -74,7 +75,11 @@ class ProjectController extends Controller
         $data = $request->validated();
         $cover = $request->validated('cover');
         $report = $request->validated('report');
+        $project->category_id = $request->validated('category_id');
         if ($cover == null || $cover->getError()) {
+            return $data;
+        }
+        if ($report == null || $report->getError()) {
             return $data;
         }
         if ($project->cover) {

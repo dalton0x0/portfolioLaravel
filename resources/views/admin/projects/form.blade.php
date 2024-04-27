@@ -11,23 +11,21 @@
                         <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un projet' }}</span>
                     </h1>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent" enctype="multipart/form-data">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
-
-                        @if($project->exists)
-                            @include('partials.input', ['value' => $project->title,'name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
-                            @include('partials.input', ['value' => $project->description,'type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
-                            @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
-                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
-                        @else
-                            @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'placeholder' => 'Titre'])
-                            @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'placeholder' => 'Description'])
-                            @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
-                            @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
-                            @include('partials.select', ['name' => 'category', 'label' => 'Categorie'])
-                        @endif
+                        @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'value' => $project->description, 'placeholder' => 'Titre'])
+                        @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'value' => $project->description, 'placeholder' => 'Description'])
+                        <div class="row">
+                            <div class="col-md-6">
+                                @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])
+                            </div>
+                            <div class="col-md-6">
+                                @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
+                            </div>
+                        </div>
+                        @include('partials.select', ['name' => 'category_id', 'label' => 'Catégorie'])
                         <div class="mt-4">
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>

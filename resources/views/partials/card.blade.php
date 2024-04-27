@@ -10,7 +10,7 @@
 @endphp
 
 <div class="{{ $class }}">
-    <div class="card shadow rounded-4">
+    <div class="card shadow rounded-4 h-100">
         <img class="img-fluid p-2" src="{{ asset('assets/images/' . $cover ) }}" alt="{{ $title }}"/>
         <div class="card-body">
             <h4 class="card-title">{!! $title !!}</h4>

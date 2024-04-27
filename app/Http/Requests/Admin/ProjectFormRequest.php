@@ -17,8 +17,6 @@ class ProjectFormRequest extends FormRequest
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
@@ -28,6 +26,7 @@ class ProjectFormRequest extends FormRequest
             'cover' => 'image|max:2048',
             'description' => 'required',
             'report' => 'required',
+            'category_id' => 'required|exists:categories,id',
         ];
     }
 

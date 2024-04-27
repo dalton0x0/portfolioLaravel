@@ -3,30 +3,40 @@
 @section('title', 'TP')
 
 @section('content')
+    @foreach($categories as $category)
+        <section class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">{{ $category->name }}</span></h1>
+                </div>
+                <div class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    @foreach($category->projects as $project)
+                        <div class="col">
+                            <div class="card h-100 shadow rounded-4">
+                                <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
+                                <div class="card-body">
+                                    <h4 class="card-title h-50">{{ $project->title }}</h4>
+                                    <p class="card-text h-50">{{ $project->description }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
+                                            <a class="btn btn-primary" href="#">Voir</a>
+                                        </div>
+                                        <small class="text-body-secondary">{{ $project->category->name }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endforeach
 <section class="album py-5 bg-body-tertiary">
     <div class="container">
         <div class="text-center mb-5">
-            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets en base de données</span></h1>
-        </div>
-        <!-- Test de projets ajoutés depuis la base de données -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 pb-5">
-            @foreach($projects as $project)
-                <div class="col">
-                    <div class="card shadow rounded-4">
-                        <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
-                        <div class="card-body">
-                            <h4 class="card-title">{{ $project->title }}</h4>
-                            <p class="card-text">{{ $project->description }}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                                    <a class="btn btn-primary" href="#">Voir</a>
-                                </div>
-                                <small class="text-body-secondary">Test</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Windows Server</span></h1>
         </div>
         <!-- Contenu Windows Server -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

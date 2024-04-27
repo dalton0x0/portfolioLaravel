@@ -17,6 +17,7 @@ class Project extends Model
         'description',
         'cover',
         'report',
+        'category_id'
     ];
     public function category() : BelongsTo
     {

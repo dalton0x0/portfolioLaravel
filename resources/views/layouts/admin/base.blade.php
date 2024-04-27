@@ -21,6 +21,16 @@
 <body class="d-flex flex-column h-100 bg-light">
     <!-- Menu -->
     @include('partials.nav')
+    <!-- Si erreur -->
+    @if($errors->any())
+        <div class="alert-danger">
+            <ul class="my-0">
+                @foreach($errors->all as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <!-- Contenu -->
     <main class="flex-shrink-0">
         @yield('content')
