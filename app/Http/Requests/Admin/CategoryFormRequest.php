@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Str;
 
 class CategoryFormRequest extends FormRequest
 {
@@ -21,6 +22,7 @@ class CategoryFormRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100',
+            'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
         ];
     }
 
@@ -35,5 +37,12 @@ class CategoryFormRequest extends FormRequest
             'name.required' => 'Un nom est requis.',
             'name.max' => 'Le nom de la catégorie est trop long.',
         ];
+    }
+
+    protected function prepareForValidation(): void
+    {
+        $this->merge([
+            'slug' => Str::slug($this->input('name'))
+        ]);
     }
 }
