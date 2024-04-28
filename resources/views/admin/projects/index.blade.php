@@ -31,7 +31,7 @@
                     <td>{{ $project->title }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
-                            <a href="{{ route('admin.project.show', ['slug' => $project->slug, 'project' => $project]) }}" class="btn btn-outline-primary me-2 rounded">
+                            <a href="{{ route('admin.project.show', ['project' => $project]) }}" class="btn btn-outline-primary me-2 rounded">
                                 <i class="bi-eye"></i>
                             </a>
                             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-outline-primary me-2 rounded">
