@@ -1,5 +1,9 @@
 <div class="card h-100 shadow rounded-4">
-    <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
+    @if($project->getCover())
+        <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
+    @else
+        <img class="img-fluid p-2 w-100" src="/project.jpg" alt="Projet"/>
+    @endif
     <div class="card-body">
         <h4 class="card-title h-50">{{ $project->title }}</h4>
         <p class="card-text h-50">{{ $project->description }}</p>

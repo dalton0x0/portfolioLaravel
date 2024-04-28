@@ -79,13 +79,13 @@ class ProjectController extends Controller
         if ($cover == null || $cover->getError()) {
             return $data;
         }
-        if ($report == null || $report->getError()) {
+        elseif ($report == null || $report->getError()) {
             return $data;
         }
-        if ($project->cover) {
+        elseif ($project->cover) {
             Storage::disk('public')->delete($project->cover);
         }
-        if ($project->report) {
+        elseif ($project->report) {
             Storage::disk('public')->delete($project->report);
         }
         $data['cover'] = $cover->store('covers', 'public');
