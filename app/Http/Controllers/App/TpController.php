@@ -16,7 +16,7 @@ class TpController extends Controller
         ]);
     }
 
-    public function show(Project $project)
+    public function show(Project $project): string
     {
         return response()->file(storage_path("app/public/").$project->report);
     }

@@ -7,7 +7,7 @@
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
-                <a class="btn btn-primary" href="{{ route('projects.tp.show', ['slug' => $project->slug, 'project' => $project]) }}" target="_blank">Voir</a>
+                <a class="btn btn-primary" href="{{ route('projects.tp.show', ['category' => $category, 'project' => $project]) }}" target="_blank">Voir</a>
             </div>
             <small class="text-body-secondary">{{ $project->category->name }}</small>
         </div>

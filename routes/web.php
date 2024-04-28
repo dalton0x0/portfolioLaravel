@@ -63,7 +63,8 @@ Route::prefix('projects')->name('projects.')->group( function () {
     });
     Route::prefix('tp')->name('tp.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
-        Route::get('/{project:slug}', [TpController::class, 'show'])->name('show')->where([
+        Route::get('/{category:slug}/{project:slug}', [TpController::class, 'show'])->name('show')->where([
+            'category' => '[0-9a-zA-Z\-]+',
             'project' => '[0-9a-zA-Z\-]+',
         ]);
         Route::prefix('windows-server')->name('windows-server.')->group( function () {
