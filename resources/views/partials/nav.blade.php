@@ -26,12 +26,25 @@
                     <li class="nav-item">
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('about') }}">À propos</a>
                     </li>
-                    {{--<li class="nav-item">
-                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('admin.index') }}">Se connecter</a>
-                    </li>--}}
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'login')]) href="{{ route('admin.index') }}">Se connecter</a>
+                    </li>
                 @else
                     <li class="nav-item">
-                        <a @class(['nav-link']) href="{{ route('index') }}">Accueil</a>
+                        <a @class(['nav-link']) href="{{ route('admin.index') }}">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'admin.projects')]) href="{{ route('admin.projects.index') }}">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'admin.categories')]) href="{{ route('admin.categories.index') }}">Catégories</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-primary">Se déconnecter</button>
+                        </form>
                     </li>
                 @endif
             </ul>

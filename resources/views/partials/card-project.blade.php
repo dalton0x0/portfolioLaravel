@@ -2,7 +2,7 @@
     @if($project->getCover())
         <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
     @else
-        <img class="img-fluid p-2 w-100" src="/project.jpg" alt="Projet"/>
+        <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/project.jpg') }}" alt="Projet"/>
     @endif
     <div class="card-body">
         <h4 class="card-title h-50">{{ $project->title }}</h4>
