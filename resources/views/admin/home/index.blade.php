@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="card shadow rounded-4 h-100">
-                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/project-2.avif') }}"
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/project.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body text-center">
                                     <h4 class="card-title">Projets</h4>
@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="card shadow rounded-4 h-100">
-                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/category.jpg') }}"
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/category.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
                                 <div class="card-body text-center">
                                     <h4 class="card-title">Catégories</h4>

@@ -70,7 +70,7 @@
                     <div class="row">
                         @include('partials.card', [
                             'class' => 'col-md-6 offset-md-3 mb-3' ,
-                            'cover' => 'projects/cover-tp-cours.png',
+                            'cover' => 'projects/cover-tp-formation.png',
                             'title' => 'Formation BTS',
                             'path' => 'tp.index',
                             'category' => 'Année 1 & 2'
