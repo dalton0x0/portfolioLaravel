@@ -31,7 +31,7 @@ class Project extends Model
     {
         return Storage::disk('public')->url($this->report);
     }
-    public function getCover()
+    public function getCoverPath()
     {
         return $this->cover ?? null;
     }

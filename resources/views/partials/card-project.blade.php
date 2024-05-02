@@ -1,12 +1,12 @@
 <div class="card h-100 shadow rounded-4">
-    @if($project->getCover())
+    @if($project->getCoverPath())
         <img class="img-fluid p-2 w-100" src="{{ $project->getCoverUrl() }}" alt="{{ $project->title }}"/>
     @else
         <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/project.jpg') }}" alt="Projet"/>
     @endif
     <div class="card-body">
         <h4 class="card-title h-50">{{ $project->title }}</h4>
-        <p class="card-text h-50">{{ $project->description }}</p>
+        <p class="card-text pt-2 h-50">{{ $project->description }}</p>
     </div>
     <div class="card-footer">
         <div class="d-flex justify-content-between align-items-center">

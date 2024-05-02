@@ -31,7 +31,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'doLogin'])->name('doLogin');
 Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 // Administration interfaces
-Route::prefix('admin')->name('admin.')->middleware('auth')->group( function () {
+Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('projects', (ProjectController::class));
     Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])->name('project.show')->where([
