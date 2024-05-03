@@ -14,9 +14,9 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.home.index', [
-            'projects' => Project::all(),
-            'categories' => Category::all(),
-            'periods' => Period::all(),
+            'projects' => Project::select('id'),
+            'categories' => Category::select('id'),
+            'periods' => Period::select('id'),
         ]);
     }
 }

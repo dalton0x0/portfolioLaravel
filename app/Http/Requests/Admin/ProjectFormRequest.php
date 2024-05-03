@@ -44,6 +44,7 @@ class ProjectFormRequest extends FormRequest
             'cover.max' => "La taille de l'image est trop grande",
             'description.required' => 'Une description est requise.',
             'report.required' => "Un compte rendu est requis.",
+            'category_id'
 
         ];
     }

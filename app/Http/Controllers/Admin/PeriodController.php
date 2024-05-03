@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\PeriodFormrequest;
+use App\Http\Requests\Admin\PeriodFormRequest;
 use App\Models\Admin\Period;
 use Illuminate\Http\Request;
 
@@ -31,7 +31,7 @@ class PeriodController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PeriodFormrequest $request)
+    public function store(PeriodFormRequest $request)
     {
 
         $period = Period::create($request->validated());
@@ -57,7 +57,7 @@ class PeriodController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PeriodFormrequest $request, Period $period)
+    public function update(PeriodFormRequest $request, Period $period)
     {
         $period->update($request->validated());
         return to_route('admin.periods.index')->with('success', 'La période a été modifiée avec succès');

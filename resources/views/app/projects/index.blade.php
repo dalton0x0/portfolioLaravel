@@ -19,6 +19,7 @@
             </div>
         </section>
     @endforeach
+    {{--
     <!-- Section Expériences Professionnelles -->
     <section class="py-5">
         <div class="container px-4">
@@ -106,4 +107,5 @@
             </div>
         </div>
     </section>
+    --}}
 @endsection

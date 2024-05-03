@@ -9,7 +9,6 @@ use App\Models\Admin\Category;
 use App\Models\Admin\Period;
 use App\Models\Admin\Project;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Storage;
 
 class AppController extends Controller
 {
@@ -46,7 +45,6 @@ class AppController extends Controller
         $report = response()->file(storage_path("app/public/").$project->report);
         return $report;
     }
-
     public function contact (ContactFormRequest $request)
     {
         $contact = $request->all();

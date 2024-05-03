@@ -9,6 +9,7 @@ use App\Http\Controllers\App\AppController;
 use App\Http\Controllers\App\ApprenticeshipsController;
 use App\Http\Controllers\App\InternshipsController;
 use App\Http\Controllers\App\PdfDownloadController;
+use App\Http\Controllers\App\PortfolioController;
 use App\Http\Controllers\App\ProjectNetworkController;
 use App\Http\Controllers\App\ProjectSystemController;
 use App\Http\Controllers\App\TpController;
@@ -31,6 +32,7 @@ URL::formatScheme('https');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'doLogin'])->name('doLogin');
 Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+
 // Administration interfaces
 Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
@@ -38,10 +40,11 @@ Route::prefix('admin')->name('admin.')->group( function () {
     Route::get('/projects/{project:slug}', [ProjectController::class, 'show'])->name('project.show')->where([
         'project' => '[0-9a-zA-Z\-]+',
     ]);
-    Route::resource('categories', (CategoryController::class));
-    Route::resource('periods', (PeriodController::class));
+    Route::resource('categories', (CategoryController::class))->except('show');
+    Route::resource('periods', (PeriodController::class))->except('show');
 });
 
+// App Portfolio interfaces
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {
     Route::get('/', [AppController::class, 'projects'])->name('index');
@@ -50,16 +53,6 @@ Route::prefix('projects')->name('projects.')->group( function () {
         'category' => '[0-9a-zA-Z\-]+',
         'project' => '[0-9a-zA-Z\-]+',
     ]);
-    Route::prefix('internships')->name('internships.')->group( function () {
-        Route::get('/', [InternshipsController::class, 'index'])->name('index');
-        Route::get('/tunnel-eoip-ipsec', [InternshipsController::class, 'tunnelEoipIpsec'])->name('tunnel-eoip-ipsec');
-        Route::get('/vpn-ipsec-pfsense', [InternshipsController::class, 'vpnIpsecPfsense'])->name('vpn-ipsec-pfsense');
-        Route::get('/ocs-inventory', [InternshipsController::class, 'ocsInventory'])->name('ocs-inventory');
-        Route::get('/pxe-mikrotik', [InternshipsController::class, 'pxeMikrotik'])->name('pxe-mikrotik');
-    });
-    Route::prefix('apprenticeships')->name('apprenticeships.')->group( function () {
-        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
-    });
     Route::prefix('system')->name('system.')->group( function () {
         Route::get('/', [ProjectSystemController::class, 'index'])->name('index');
         Route::get('/sheet', [PdfDownloadController::class, 'donwloadSheetSytem'])->name('sheet');
@@ -73,6 +66,34 @@ Route::prefix('projects')->name('projects.')->group( function () {
         Route::get('/', [ProjectNetworkController::class, 'index'])->name('index');
         Route::get('/sheet', [PdfDownloadController::class, 'donwloadSheetNetwork'])->name('sheet');
         Route::get('/downloadProjectNetwork', [PdfDownloadController::class, 'downloadProjectNetwork'])->name('downloadProjectNetwork');
+    });
+});
+Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');
+Route::get('/trainings/cv', [PdfDownloadController::class, 'downloadCv'])->name('downloadCv');
+Route::get('/skills', [AppController::class, 'skills'])->name('skills');
+Route::get('/skills/summary', [PdfDownloadController::class, 'downloadSummary'])->name('summary');
+Route::get('/news', [AppController::class, 'news'])->name('news');
+Route::get('/about', [AppController::class, 'about'])->name('about');
+Route::post('/about', [AppController::class, 'contact'])->name('contact');
+
+/*
+Route::prefix('projects')->name('projects.')->group( function () {
+    Route::get('/', [AppController::class, 'projects'])->name('index');
+    Route::get('/{period:slug}/{category:slug}/{project:slug}', [AppController::class, 'show'])->name('show')->where([
+        'period' => '[0-9a-zA-Z\-]+',
+        'category' => '[0-9a-zA-Z\-]+',
+        'project' => '[0-9a-zA-Z\-]+',
+    ]);
+    Route::resource('app', (AppController::class));
+    Route::prefix('internships')->name('internships.')->group( function () {
+        Route::get('/', [InternshipsController::class, 'index'])->name('index');
+        Route::get('/tunnel-eoip-ipsec', [InternshipsController::class, 'tunnelEoipIpsec'])->name('tunnel-eoip-ipsec');
+        Route::get('/vpn-ipsec-pfsense', [InternshipsController::class, 'vpnIpsecPfsense'])->name('vpn-ipsec-pfsense');
+        Route::get('/ocs-inventory', [InternshipsController::class, 'ocsInventory'])->name('ocs-inventory');
+        Route::get('/pxe-mikrotik', [InternshipsController::class, 'pxeMikrotik'])->name('pxe-mikrotik');
+    });
+    Route::prefix('apprenticeships')->name('apprenticeships.')->group( function () {
+        Route::get('/', [ApprenticeshipsController::class, 'index'])->name('index');
     });
     Route::prefix('tp')->name('tp.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
@@ -109,3 +130,4 @@ Route::get('/skills/summary', [PdfDownloadController::class, 'downloadSummary'])
 Route::get('/news', [AppController::class, 'news'])->name('news');
 Route::get('/about', [AppController::class, 'about'])->name('about');
 Route::post('/about', [AppController::class, 'contact'])->name('contact');
+*/
