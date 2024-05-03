@@ -41,6 +41,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card shadow rounded-4 h-100">
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/period.png') }}"
+                                     alt="Tunnel EOIP MikroTik"/>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Périodes</h4>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
+                                            <a class="btn btn-primary" href="{{ route('admin.periods.index') }}">Gérer</a>
+                                        </div>
+                                        <small class="text-body-secondary">Total : {{ $periods->count() }}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

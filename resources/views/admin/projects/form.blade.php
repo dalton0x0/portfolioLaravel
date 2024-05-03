@@ -8,7 +8,8 @@
             <div class="row justify-content-md-center">
                 <div class="text-center mb-5">
                     <h1 class="display-5 fw-bolder">
-                        <span class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un projet' }}</span>
+                        <span
+                            class="text-gradient d-inline">{{ $project->exists ? 'Modifier : ' . $project->title : 'Créer un projet' }}</span>
                     </h1>
                 </div>
                 <div class="col-md-7">
@@ -25,7 +26,14 @@
                                 @include('partials.upload', ['name' => 'cover', 'label' => 'Cover'])
                             </div>
                         </div>
-                        @include('partials.select', ['name' => 'category_id', 'label' => 'Catégorie'])
+                        <div class="row">
+                            <div class="col-md-6">
+                                @include('partials.select-category', ['name' => 'category_id', 'label' => 'Catégorie'])
+                            </div>
+                            <div class="col-md-6">
+                                @include('partials.select-period', ['name' => 'period_id', 'label' => 'Période de réalisation'])
+                            </div>
+                        </div>
                         <div class="mt-4">
                             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary me-2 rounded">
                                 <i class="bi-arrow-left-short"></i>

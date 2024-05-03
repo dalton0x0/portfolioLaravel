@@ -40,6 +40,9 @@
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'admin.categories')]) href="{{ route('admin.categories.index') }}">Catégories</a>
                     </li>
                     <li class="nav-item">
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'admin.periods')]) href="{{ route('admin.periods.index') }}">Périodes</a>
+                    </li>
+                    <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
                             @method('delete')
                             @csrf

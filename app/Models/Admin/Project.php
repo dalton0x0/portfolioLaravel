@@ -17,11 +17,16 @@ class Project extends Model
         'description',
         'cover',
         'report',
-        'category_id'
+        'category_id',
+        'period_id',
     ];
     public function category() : BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+    public function period() : BelongsTo
+    {
+        return $this->belongsTo(Period::class);
     }
     public function getCoverUrl(): string
     {

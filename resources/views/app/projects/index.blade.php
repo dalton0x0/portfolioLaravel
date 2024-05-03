@@ -3,6 +3,22 @@
 @section('title', 'Mes expériences professionnelles')
 
 @section('content')
+    @foreach($periods as $period)
+        <section class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">{{ $period->name }}</span></h1>
+                </div>
+                <div class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    @foreach($period->projects as $project)
+                        <div class="col">
+                            @include('partials.card-project')
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endforeach
     <!-- Section Expériences Professionnelles -->
     <section class="py-5">
         <div class="container px-4">

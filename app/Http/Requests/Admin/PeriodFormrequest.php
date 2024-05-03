@@ -5,7 +5,7 @@ namespace App\Http\Requests\Admin;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Str;
 
-class ProjectFormRequest extends FormRequest
+class PeriodFormrequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,13 +21,8 @@ class ProjectFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required',
+            'name' => 'required|max:100',
             'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
-            'cover' => 'image|max:2048',
-            'description' => 'required',
-            'report' => 'required',
-            'category_id' => 'required|exists:categories,id',
-            'period_id' => 'required|exists:categories,id',
         ];
     }
 
@@ -39,19 +34,15 @@ class ProjectFormRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required' => 'Un titre est requis.',
-            'cover.image' => "Le fichier sélectionné n'est pas une image.",
-            'cover.max' => "La taille de l'image est trop grande",
-            'description.required' => 'Une description est requise.',
-            'report.required' => "Un compte rendu est requis.",
-
+            'name.required' => 'Un nom est requis.',
+            'name.max' => 'Le nom de la période est trop longue.',
         ];
     }
 
     protected function prepareForValidation(): void
     {
         $this->merge([
-            'slug' => Str::slug($this->input('title'))
+            'slug' => Str::slug($this->input('name'))
         ]);
     }
 }

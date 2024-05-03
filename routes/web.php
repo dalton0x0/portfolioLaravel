@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PeriodController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\App\AppController;
 use App\Http\Controllers\App\ApprenticeshipsController;
@@ -38,11 +39,17 @@ Route::prefix('admin')->name('admin.')->group( function () {
         'project' => '[0-9a-zA-Z\-]+',
     ]);
     Route::resource('categories', (CategoryController::class));
+    Route::resource('periods', (PeriodController::class));
 });
 
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {
     Route::get('/', [AppController::class, 'projects'])->name('index');
+    Route::get('/{period:slug}/{category:slug}/{project:slug}', [AppController::class, 'show'])->name('show')->where([
+        'period' => '[0-9a-zA-Z\-]+',
+        'category' => '[0-9a-zA-Z\-]+',
+        'project' => '[0-9a-zA-Z\-]+',
+    ]);
     Route::prefix('internships')->name('internships.')->group( function () {
         Route::get('/', [InternshipsController::class, 'index'])->name('index');
         Route::get('/tunnel-eoip-ipsec', [InternshipsController::class, 'tunnelEoipIpsec'])->name('tunnel-eoip-ipsec');
@@ -69,10 +76,6 @@ Route::prefix('projects')->name('projects.')->group( function () {
     });
     Route::prefix('tp')->name('tp.')->group( function () {
         Route::get('/', [TpController::class, 'index'])->name('index');
-        Route::get('/{category:slug}/{project:slug}', [TpController::class, 'show'])->name('show')->where([
-            'category' => '[0-9a-zA-Z\-]+',
-            'project' => '[0-9a-zA-Z\-]+',
-        ]);
         Route::prefix('windows-server')->name('windows-server.')->group( function () {
             Route::get('/ad-ds', [PdfDownloadController::class, 'downloadAdds'])->name('ad-ds');
             Route::get('/dhcp', [PdfDownloadController::class, 'downloadDhcp'])->name('dhcp');

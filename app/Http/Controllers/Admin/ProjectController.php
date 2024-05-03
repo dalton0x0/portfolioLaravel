@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProjectFormRequest;
 use App\Models\Admin\Category;
+use App\Models\Admin\Period;
 use App\Models\Admin\Project;
 use Illuminate\Support\Facades\Storage;
 
@@ -30,6 +31,7 @@ class ProjectController extends Controller
         return view('admin.projects.form', [
             'project' =>$project,
             'categories' => Category::select('id', 'name')->get(),
+            'periods' => Period::select('id', 'name')->get(),
         ]);
     }
 
@@ -58,6 +60,7 @@ class ProjectController extends Controller
         return view('admin.projects.form', [
             'project' => $project,
             'categories' => Category::select('id', 'name')->get(),
+            'periods' => Period::select('id', 'name')->get(),
         ]);
     }
 
@@ -76,6 +79,7 @@ class ProjectController extends Controller
         $cover = $request->validated('cover');
         $report = $request->validated('report');
         $project->category_id = $request->validated('category_id');
+        $project->period_id = $request->validated('period_id');
         if ($cover == null || $cover->getError()) {
             return $data;
         }

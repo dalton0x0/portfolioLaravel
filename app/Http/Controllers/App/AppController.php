@@ -5,6 +5,9 @@ namespace App\Http\Controllers\App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\App\ContactFormRequest;
 use App\Mail\ContactSendMail;
+use App\Models\Admin\Category;
+use App\Models\Admin\Period;
+use App\Models\Admin\Project;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,7 +19,11 @@ class AppController extends Controller
     }
     public function projects ()
     {
-        return view('app.projects.index');
+        return view('app.projects.index', [
+            'projects' => Project::all(),
+            'categories' => Category::all(),
+            'periods' => Period::all(),
+        ]);
     }
     public function trainings ()
     {
@@ -33,6 +40,11 @@ class AppController extends Controller
     public function about ()
     {
         return view('app.about.index');
+    }
+    public function show(string $period, string $category, Project $project)
+    {
+        $report = response()->file(storage_path("app/public/").$project->report);
+        return $report;
     }
 
     public function contact (ContactFormRequest $request)
