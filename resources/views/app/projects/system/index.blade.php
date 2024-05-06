@@ -48,7 +48,7 @@
                                         </div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Topologie</span></h3>
                                     </div>
-                                    <img class="img-fluid p-2" src="{{ asset('assets/images/bts/topologie-systeme.png' ) }}" alt="topologie"/>
+                                    <img class="img-fluid p-2" src="{{ asset('storage/img/system/topologie-systeme.png') }}" alt="topologie"/>
                                 </div>
                             </div>
                         </div>
@@ -66,34 +66,34 @@
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.sheet') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.sheet') }}" target="_blank">
                                             Fiche projet système
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.samba') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.samba') }}" target="_blank">
                                             Partie A : SAMBA AD
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi') }}" target="_blank">
                                             Partie B : GLPI
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix') }}" target="_blank">
                                             Partie C : ZABBIX
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi-agent') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi-agent') }}" target="_blank">
                                             Partie D : Agent GLPI
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix-agent') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix-agent') }}" target="_blank">
                                             Partie E : Agent ZABBIX
                                         </a>
                                     </div>

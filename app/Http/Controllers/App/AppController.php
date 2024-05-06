@@ -42,8 +42,7 @@ class AppController extends Controller
     }
     public function show(string $period, string $category, Project $project)
     {
-        $report = response()->file(storage_path("app/public/").$project->report);
-        return $report;
+        return response()->file(storage_path("app/public/").$project->report);
     }
     public function contact (ContactFormRequest $request)
     {

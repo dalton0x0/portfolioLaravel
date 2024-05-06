@@ -48,7 +48,7 @@
                                         </div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Topologie</span></h3>
                                     </div>
-                                    <img class="img-fluid p-2" src="{{ asset('assets/images/bts/topologie-reseau.png' ) }}" alt="topologie"/>
+                                    <img class="img-fluid p-2" src="{{ asset('storage/img/network/topologie-reseau.png') }}" alt="Topologie réseau"/>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.sheet') }}">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.sheet') }}"  target="_blank">
                                             Fiche projet réseau
                                         </a>
                                     </div>
@@ -76,24 +76,24 @@
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
                                             Bientôt
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
                                             Bientôt
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
                                             Bientôt
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
                                             Bientôt
                                         </a>
                                     </div>

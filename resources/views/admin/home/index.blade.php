@@ -11,7 +11,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4 h-100">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/project.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
@@ -26,7 +26,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4 h-100">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/category.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4 h-100">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/period.png') }}"
                                      alt="Tunnel EOIP MikroTik"/>
