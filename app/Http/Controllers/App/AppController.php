@@ -18,10 +18,30 @@ class AppController extends Controller
     }
     public function projects ()
     {
-        return view('app.projects.index', [
+        return view('app.projects.index');
+    }
+    public function internship()
+    {
+        return view('app.projects.internship.index', [
             'projects' => Project::all(),
             'categories' => Category::all(),
-            'periods' => Period::all(),
+            'periods' => Period::query()->where('name','like', 'Stage')->get(),
+        ]);
+    }
+    public function apprenticeship()
+    {
+        return view('app.projects.apprenticeship.index', [
+            'projects' => Project::all(),
+            'categories' => Category::all(),
+            'periods' => Period::query()->where('name','like', 'Alternance')->get(),
+        ]);
+    }
+    public function formation()
+    {
+        return view('app.projects.formation.index', [
+            'projects' => Project::all(),
+            'categories' => Category::all(),
+            'periods' => Period::query()->where('name','like', 'Formation')->get(),
         ]);
     }
     public function trainings ()

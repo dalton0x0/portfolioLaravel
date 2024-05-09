@@ -31,20 +31,54 @@
             </div>
         </div>
     </section>
-    @foreach($periods as $period)
-        <section class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">{{ $period->name }}</span></h1>
-                </div>
-                <div class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    @foreach($period->projects as $project)
-                        <div class="col">
-                            @include('partials.card-project')
-                        </div>
-                    @endforeach
+    <!-- Section Expérience Pro -->
+    <section class="album pb-5 bg-body-tertiary">
+        <div class="container px-4">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mes expériences professionnelles</span></h1>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="row">
+                        @include('partials.card', [
+                            'class' => 'col-md-6 mb-3' ,
+                            'cover' => 'projects/logo-redvise.png',
+                            'title' => 'Stage',
+                            'path' => 'internship',
+                            'category' => 'Redvise'
+                        ])
+                        @include('partials.card', [
+                            'class' => 'col-md-6 mb-3' ,
+                            'cover' => 'projects/logo-itic.png',
+                            'title' => 'Alernance',
+                            'path' => 'apprenticeship',
+                            'category' => 'ITIC Paris'
+                        ])
+                    </div>
                 </div>
             </div>
-        </section>
-    @endforeach
+        </div>
+    </section>
+    </section>
+    <!-- Section Formation -->
+    <section class="album pb-5 bg-body-tertiary">
+        <div class="container px-4">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets en cours de formation</span></h1>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="row">
+                        @include('partials.card', [
+                            'class' => 'col-md-6 offset-md-3 mb-3' ,
+                            'cover' => 'projects/cover-formation.png',
+                            'title' => 'Formation BTS',
+                            'path' => 'formation',
+                            'category' => 'Année 1 & 2'
+                        ])
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

@@ -44,6 +44,9 @@ Route::prefix('admin')->name('admin.')->group( function () {
 Route::get('/', [AppController::class, 'index'])->name('index');
 Route::prefix('projects')->name('projects.')->group( function () {
     Route::get('/', [AppController::class, 'projects'])->name('index');
+    Route::get('/internship', [AppController::class, 'internship'])->name('internship');
+    Route::get('/apprenticeship', [AppController::class, 'apprenticeship'])->name('apprenticeship');
+    Route::get('/formation', [AppController::class, 'formation'])->name('formation');
     Route::get('/{period:slug}/{category:slug}/{project:slug}', [AppController::class, 'show'])->name('show')->where([
         'period' => '[0-9a-zA-Z\-]+',
         'category' => '[0-9a-zA-Z\-]+',
