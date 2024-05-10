@@ -43,36 +43,36 @@
     </section>
     <!-- Section Expérience Pro -->
     <section class="album pb-5 bg-body-tertiary">
-        <div class="container px-4">
+        <div class="container-fluid px-4">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/navigo-1.jpeg') }}" alt="Navigo"/>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/navigo-3.jpg') }}" alt="Navigo"/>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/navigo-2.jpg') }}" alt="Navigo"/>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/navigo-4.jpg') }}" alt="Navigo"/>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/navigo-5.png') }}" alt="Navigo"/>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
                                 <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/watch.jpg') }}" alt="Navigo"/>
                             </div>
