@@ -59,7 +59,6 @@
             </div>
         </div>
     </section>
-    </section>
     <!-- Section Formation -->
     <section class="album pb-5 bg-body-tertiary">
         <div class="container px-4">
