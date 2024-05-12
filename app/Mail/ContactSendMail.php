@@ -27,7 +27,7 @@ class ContactSendMail extends Mailable
     {
         return new Envelope(
             bcc:'contact@cheridanh.cg',
-            subject: 'Votre message de contact à Chéridanh',
+            subject: 'Accusé réception',
         );
     }
 
@@ -37,7 +37,7 @@ class ContactSendMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.app.contact',
+            markdown: 'app.email.contact',
         );
     }
 
