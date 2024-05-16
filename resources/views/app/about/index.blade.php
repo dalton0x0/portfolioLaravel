@@ -19,6 +19,9 @@
                             d'application web.
                         </p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
+                            <a class="text-gradient" target="_blank" href="https://www.snapchat.com/add/ch.dalton?share_id=cuW6mTJ_SSuV2bDhgEZ8SA&locale=fr_FR">
+                                @include('partials.icon', ['class' => 'bi-snapchat'])
+                            </a>
                             <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela">
                                 @include('partials.icon', ['class' => 'bi-linkedin'])
                             </a>
