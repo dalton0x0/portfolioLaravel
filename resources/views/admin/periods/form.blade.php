@@ -8,7 +8,7 @@
             <div class="row justify-content-md-center">
                 <div class="text-center mb-5">
                     <h1 class="display-5 fw-bolder">
-                        <span class="text-gradient d-inline">{{ $period->exists ? 'Modifier : ' . $period->title : 'Créer un catégorie' }}</span>
+                        <span class="text-gradient d-inline">{{ $period->exists ? 'Modifier : ' . $period->title : 'Créer une période' }}</span>
                     </h1>
                 </div>
                 <div class="col-md-6">

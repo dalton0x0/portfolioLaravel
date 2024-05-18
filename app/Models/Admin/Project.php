@@ -33,11 +33,7 @@ class Project extends Model
     }
     public function getCoverUrl(): string
     {
-        return Storage::disk('public')->url($this->cover);
-    }
-    public function getReportUrl(): string
-    {
-        return Storage::disk('public')->url($this->report);
+        return url(Storage::url($this->cover));
     }
     public function getCoverPath()
     {

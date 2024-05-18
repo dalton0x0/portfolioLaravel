@@ -24,14 +24,16 @@
             @foreach($projects as $project)
                 <tr>
                     <td>
-                        @if($project->cover)
-                            <img class="rounded" src="{{ $project->getCoverUrl() }}" width="150px" alt="">
+                        @if($project->getCoverPath())
+                            <img class="rounded" src="{{ $project->getCoverUrl() }}" width="150px" alt="{{ $project->title }}"/>
+                        @else
+                            <img class="rounded" src="{{ asset('assets/img/project.png') }}" width="150px" alt="Projet"/>
                         @endif
                     </td>
                     <td>{{ $project->title }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
-                            <a href="{{ route('admin.project.show', ['project' => $project]) }}" class="btn btn-outline-primary me-2 rounded">
+                            <a href="{{ route('admin.project.show', ['project' => $project]) }}" class="btn btn-outline-primary me-2 rounded" target="_blank">
                                 <i class="bi-eye"></i>
                             </a>
                             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-outline-primary me-2 rounded">

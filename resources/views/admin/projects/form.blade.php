@@ -16,7 +16,7 @@
                     <form action="{{ route($project->exists ? 'admin.projects.update' : 'admin.projects.store', $project) }}" method="post" id="ProjectContent" enctype="multipart/form-data">
                         @csrf
                         @method($project->exists ? 'put' : 'post')
-                        @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'value' => $project->description, 'placeholder' => 'Titre'])
+                        @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'value' => $project->title, 'placeholder' => 'Titre'])
                         @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'value' => $project->description, 'placeholder' => 'Description'])
                         <div class="row">
                             <div class="col-md-6">

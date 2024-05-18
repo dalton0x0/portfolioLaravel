@@ -23,9 +23,9 @@ class ProjectFormRequest extends FormRequest
         return [
             'title' => 'required',
             'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
-            'cover' => 'image|max:2048',
+            'cover' => 'image|mimes:jpeg,png,jpg,svg|max:5120',
             'description' => 'required',
-            'report' => 'required',
+            'report' => 'required|mimes:pdf',
             'category_id' => 'required|exists:categories,id',
             'period_id' => 'required|exists:categories,id',
         ];
@@ -42,10 +42,10 @@ class ProjectFormRequest extends FormRequest
             'title.required' => 'Un titre est requis.',
             'cover.image' => "Le fichier sélectionné n'est pas une image.",
             'cover.max' => "La taille de l'image est trop grande",
+            'cover.mimes' => "Le fichier sélectionner doit être en format : jpeg, jpg, bmp, png.",
             'description.required' => 'Une description est requise.',
             'report.required' => "Un compte rendu est requis.",
-            'category_id'
-
+            'report.mimes' => "Le fichier choisi n'est pas un fichier PDF.",
         ];
     }
 

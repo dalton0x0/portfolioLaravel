@@ -49,7 +49,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return response()->file(storage_path("app/public/").$project->report);
+        return response()->file(public_path("storage/").$project->report);
     }
 
     /**
@@ -83,13 +83,13 @@ class ProjectController extends Controller
         if ($cover == null || $cover->getError()) {
             return $data;
         }
-        elseif ($report == null || $report->getError()) {
+        if ($report == null || $report->getError()) {
             return $data;
         }
-        elseif ($project->cover) {
+        if ($project->cover) {
             Storage::disk('public')->delete($project->cover);
         }
-        elseif ($project->report) {
+        if ($project->report) {
             Storage::disk('public')->delete($project->report);
         }
         $data['cover'] = $cover->store('covers', 'public');
