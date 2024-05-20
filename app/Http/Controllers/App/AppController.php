@@ -5,7 +5,6 @@ namespace App\Http\Controllers\App;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\App\ContactFormRequest;
 use App\Mail\ContactSendMail;
-use App\Models\Admin\Category;
 use App\Models\Admin\Period;
 use App\Models\Admin\Project;
 use Illuminate\Support\Facades\Mail;
@@ -22,26 +21,38 @@ class AppController extends Controller
     }
     public function internship()
     {
+        $period = Period::where('name', 'like', 'Stage')->firstOrFail();
+        $projects = Project::where('period_id', $period->id)
+            ->with('category')
+            ->get()
+            ->groupBy('category.name');
         return view('app.projects.internship.index', [
-            'projects' => Project::all(),
-            'categories' => Category::all(),
-            'periods' => Period::query()->where('name','like', 'Stage')->get(),
+            'period' => $period,
+            'projects' => $projects,
         ]);
     }
     public function apprenticeship()
     {
+        $period = Period::where('name', 'like', 'Alternance')->firstOrFail();
+        $projects = Project::where('period_id', $period->id)
+            ->with('category')
+            ->get()
+            ->groupBy('category.name');
         return view('app.projects.apprenticeship.index', [
-            'projects' => Project::all(),
-            'categories' => Category::all(),
-            'periods' => Period::query()->where('name','like', 'Alternance')->get(),
+            'period' => $period,
+            'projects' => $projects,
         ]);
     }
     public function formation()
     {
+        $period = Period::where('name', 'like', 'Formation')->firstOrFail();
+        $projects = Project::where('period_id', $period->id)
+            ->with('category')
+            ->get()
+            ->groupBy('category.name');
         return view('app.projects.formation.index', [
-            'projects' => Project::all(),
-            'categories' => Category::all(),
-            'periods' => Period::query()->where('name','like', 'Formation')->get(),
+            'period' => $period,
+            'projects' => $projects,
         ]);
     }
     public function trainings ()
