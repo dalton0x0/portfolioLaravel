@@ -19,7 +19,7 @@
                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start">
                     <a class="btn btn-primary" href="{{ route('projects.' . $path ) }}">Voir</a>
                 </div>
-                <small class="text-body-secondary">{{ $category }}</small>
+                <small class="text-body-secondary">{!! $category !!}</small>
             </div>
         </div>
     </div>

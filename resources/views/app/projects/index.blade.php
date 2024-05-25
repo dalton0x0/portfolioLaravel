@@ -14,14 +14,14 @@
                     <div class="row">
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
-                            'cover' => 'system/cover-systeme.png',
+                            'cover' => 'system/cover-system.png',
                             'title' => 'Système',
                             'path' => 'system.index',
                             'category' => 'Linux'
                         ])
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
-                            'cover' => 'network/cover-reseau.png',
+                            'cover' => 'network/cover-network.png',
                             'title' => 'Réseau',
                             'path' => 'network.index',
                             'category' => 'MikroTik'
@@ -45,14 +45,14 @@
                             'cover' => 'projects/logo-redvise.png',
                             'title' => 'Stage',
                             'path' => 'internship',
-                            'category' => 'Redvise'
+                            'category' => '1<sup>re</sup> année'
                         ])
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
                             'cover' => 'projects/logo-itic.png',
                             'title' => 'Alernance',
                             'path' => 'apprenticeship',
-                            'category' => 'ITIC Paris'
+                            'category' => '2<sup>e</sup> année'
                         ])
                     </div>
                 </div>
