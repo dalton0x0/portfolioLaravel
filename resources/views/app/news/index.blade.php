@@ -18,22 +18,24 @@
                                         <span class="text-gradient d-inline">@include('partials.icon', ['class' => 'bi-apple'])Le pass Navigo bientôt intégré à l’iPhone</span>
                                     </h3>
                                 </div>
-                                <p>
-                                    Après des années de discussions avec Apple et des développements techniques plus
-                                    longs que prévus, les iPhones vont bientôt pouvoir intégrer le Pass Navigo.
-                                    Concrètement, si tout va bien, d’ici fin mai, les abonnés des transports franciliens
-                                    pourront non seulement télécharger leur titre de transport avec leur iPhone (ce
-                                    qu’ils pouvaient déjà faire depuis 2021) mais aussi passer les portiques grâce à
-                                    leur smartphone. Soit quelques semaines avant les Jeux olympiques.
-                                </p>
-                                <p>
-                                    Principale cause du retard, le verrouillage par Apple de la technologie NFC qui
-                                    permet le sans contact et de communiquer avec les bornes de validation. Un accord a
-                                    finalement été signée par IDFM en 2022 après plus de trois ans de négociations.
-                                    21 millions d’achats de titre de transport ont été effectués directement via des
-                                    smartphones au cours des cinq dernières années, majoritairement (61 %) par des
-                                    utilisateurs d’iPhones, indique IDFM.
-                                </p>
+                                <div class="text-justify">
+                                    <p>
+                                        Après des années de discussions avec Apple et des développements techniques plus
+                                        longs que prévus, les iPhones vont bientôt pouvoir intégrer le Pass Navigo.
+                                        Concrètement, si tout va bien, d’ici fin mai, les abonnés des transports franciliens
+                                        pourront non seulement télécharger leur titre de transport avec leur iPhone (ce
+                                        qu’ils pouvaient déjà faire depuis 2021) mais aussi passer les portiques grâce à
+                                        leur smartphone. Soit quelques semaines avant les Jeux olympiques.
+                                    </p>
+                                    <p>
+                                        Principale cause du retard, le verrouillage par Apple de la technologie NFC qui
+                                        permet le sans contact et de communiquer avec les bornes de validation. Un accord a
+                                        finalement été signée par IDFM en 2022 après plus de trois ans de négociations.
+                                        21 millions d’achats de titre de transport ont été effectués directement via des
+                                        smartphones au cours des cinq dernières années, majoritairement (61 %) par des
+                                        utilisateurs d’iPhones, indique IDFM.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
