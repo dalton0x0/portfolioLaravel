@@ -16,7 +16,7 @@
                         <h2 class="text-primary fw-bolder mb-0">Tableau de synthèse</h2>
                         <!-- Mon CV -->
                         <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('viewSummary') }}" target="_blank">
-                            @include('partials.icon', ['class' => 'd-inline-block bi-download'])
+                            @include('partials.icon', ['class' => 'd-inline-block bi-eye'])
                         </a>
                     </div>
                     <div class="card shadow border-0 rounded-4">

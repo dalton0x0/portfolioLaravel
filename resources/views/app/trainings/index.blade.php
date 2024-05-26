@@ -17,7 +17,7 @@
                         <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
                         <!-- Mon CV -->
                         <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('viewCv') }}" target="_blank">
-                            @include('partials.icon', ['class' => 'd-inline-block bi-download']) CV
+                            @include('partials.icon', ['class' => 'd-inline-block bi-eye']) CV
                         </a>
                     </div>
                     <!-- Contenu d'une expérience -->
