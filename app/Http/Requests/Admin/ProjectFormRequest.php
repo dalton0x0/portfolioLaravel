@@ -20,32 +20,39 @@ class ProjectFormRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'title' => 'required',
             'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
             'cover' => 'image|mimes:jpeg,png,jpg,svg|max:5120',
             'description' => 'required',
-            'report' => 'required|mimes:pdf',
             'category_id' => 'required|exists:categories,id',
-            'period_id' => 'required|exists:categories,id',
+            'period_id' => 'required|exists:periods,id',
         ];
+
+        if ($this->isMethod('post')) {
+            $rules['report'] = 'required|mimes:pdf';
+        } else {
+            // Si c'est une mise à jour, le report est optionnel
+            $rules['report'] = 'nullable|mimes:pdf';
+        }
+
+        return $rules;
     }
 
-    /**
-     * Get the error messages for the defined validation rules.
-     *
-     * @return array
-     */
     public function messages(): array
     {
         return [
             'title.required' => 'Un titre est requis.',
             'cover.image' => "Le fichier sélectionné n'est pas une image.",
-            'cover.max' => "La taille de l'image est trop grande",
-            'cover.mimes' => "Le fichier sélectionner doit être en format : jpeg, jpg, bmp, png.",
+            'cover.max' => "La taille de l'image est trop grande.",
+            'cover.mimes' => "Le fichier sélectionné doit être en format : jpeg, jpg, bmp, png.",
             'description.required' => 'Une description est requise.',
             'report.required' => "Un compte rendu est requis.",
             'report.mimes' => "Le fichier choisi n'est pas un fichier PDF.",
+            'category_id.required' => 'Une catégorie est requise.',
+            'category_id.exists' => 'La catégorie sélectionnée est invalide.',
+            'period_id.required' => 'Une période de réalisation est requise.',
+            'period_id.exists' => 'La période de réalisation sélectionnée est invalide.',
         ];
     }
 

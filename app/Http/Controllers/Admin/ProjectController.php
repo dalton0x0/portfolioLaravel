@@ -38,10 +38,11 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProjectFormRequest $request, Project $project)
+    public function store(ProjectFormRequest $request)
     {
-        $project = Project::create($this->extractData(new Project(), $request));
-        return to_route('admin.projects.index')->with('success', 'Le projet a été crée avec succès !');
+        $data = $this->extractData(new Project(), $request);
+        $project = Project::create($data);
+        return to_route('admin.projects.index')->with('success', 'Le projet a été créé avec succès !');
     }
 
     /**
@@ -69,31 +70,34 @@ class ProjectController extends Controller
      */
     public function update(ProjectFormRequest $request, Project $project)
     {
-        $project->update($this->extractData($project, $request));
+        $data = $this->extractData($project, $request);
+        $project->update($data);
         return to_route('admin.projects.index')->with('success', 'Le projet a été modifié avec succès !');
     }
 
     private function extractData(Project $project, ProjectFormRequest $request) : array
     {
         $data = $request->validated();
-        $cover = $request->validated('cover');
-        $report = $request->validated('report');
-        $project->category_id = $request->validated('category_id');
-        $project->period_id = $request->validated('period_id');
-        if ($cover == null || $cover->getError()) {
-            return $data;
+        if ($request->hasFile('cover') && $request->file('cover')->isValid()) {
+            if ($project->exists && $project->cover) {
+                Storage::disk('public')->delete($project->cover);
+            }
+            $data['cover'] = $request->file('cover')->store('covers', 'public');
+        } else {
+            if ($project->exists) {
+                $data['cover'] = $project->cover;
+            }
         }
-        if ($report == null || $report->getError()) {
-            return $data;
+        if ($request->hasFile('report') && $request->file('report')->isValid()) {
+            if ($project->exists && $project->report) {
+                Storage::disk('public')->delete($project->report);
+            }
+            $data['report'] = $request->file('report')->store('reports', 'public');
+        } else {
+            if ($project->exists) {
+                $data['report'] = $project->report;
+            }
         }
-        if ($project->cover) {
-            Storage::disk('public')->delete($project->cover);
-        }
-        if ($project->report) {
-            Storage::disk('public')->delete($project->report);
-        }
-        $data['cover'] = $cover->store('covers', 'public');
-        $data['report'] = $report->store('reports', 'public');
         return $data;
     }
 
