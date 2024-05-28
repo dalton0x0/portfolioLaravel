@@ -64,6 +64,9 @@ Route::prefix('projects')->name('projects.')->group( function () {
     Route::prefix('network')->name('network.')->group( function () {
         Route::get('/', [ProjectNetworkController::class, 'index'])->name('index');
         Route::get('/sheet', [PdfViewController::class, 'viewSheetNetwork'])->name('sheet');
+        Route::get('/ap', [PdfViewController::class, 'viewApNetwork'])->name('ap');
+        Route::get('/multiple-ssid', [PdfViewController::class, 'viewMultipleSsidNetwork'])->name('multiple-ssid');
+        Route::get('/station', [PdfViewController::class, 'viewStationNetwork'])->name('station');
     });
 });
 Route::get('/trainings', [AppController::class, 'trainings'])->name('trainings');

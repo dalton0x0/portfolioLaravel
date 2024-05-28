@@ -71,30 +71,20 @@
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#">
-                                            Bientôt
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.ap') }}" target="_blank">
+                                            Access Point (AP)
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
-                                            Bientôt
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.multiple-ssid') }}" target="_blank">
+                                            AP avec multiple SSID
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
-                                            Bientôt
-                                        </a>
-                                    </div>
-                                    <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
-                                            Bientôt
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="#" target="_blank">
-                                            Bientôt
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.station') }}" target="_blank">
+                                            Station Wifi
                                         </a>
                                     </div>
                                 </div>
