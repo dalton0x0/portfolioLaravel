@@ -18,7 +18,7 @@
                     </div>
                     <!-- Contexte -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col">
                                     <div class="d-flex align-items-center mb-4">
@@ -27,7 +27,7 @@
                                         </div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Contexte</span></h3>
                                     </div>
-                                    <p>
+                                    <p class="text-justify">
                                         Dans le cadre de l'amélioration de ses infrastructures informatiques, la Maison des Ligues (M2L) a entrepris la
                                         mise en place d'un réseau sans fil (Wi-Fi) pour répondre aux besoins croissants de connectivité de ses
                                         utilisateurs. Ce réseau sans fil est conçu pour connecter plusieurs VLANs distincts, chacun dédié à un groupe
@@ -39,7 +39,7 @@
                     </div>
                     <!-- Topologie -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col">
                                     <div class="d-flex align-items-center mb-4">
@@ -55,7 +55,7 @@
                     </div>
                     <!-- Ressources -->
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <!-- Listes des ressources -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">
@@ -72,19 +72,19 @@
                                     </div>
                                     <div class="col mb-4 mb-md-0">
                                         <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.ap') }}" target="_blank">
-                                            Access Point (AP)
+                                            Partie A : Access Point
                                         </a>
                                     </div>
                                     <div class="col">
                                         <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.multiple-ssid') }}" target="_blank">
-                                            AP avec multiple SSID
+                                            Partie B : AP multiple SSID
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
                                         <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.station') }}" target="_blank">
-                                            Station Wifi
+                                            Partie C : Station Wifi
                                         </a>
                                     </div>
                                 </div>

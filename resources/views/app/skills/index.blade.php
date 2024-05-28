@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <!-- Listes des compétences en Systeme & Réseau -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">
@@ -65,14 +65,14 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <!-- Liste des compétences en Dev -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
                                         @include('partials.icon', ['class' => 'bi-code-slash'])
                                     </div>
-                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Developpement informatique</span>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Developpement</span>
                                     </h3>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">

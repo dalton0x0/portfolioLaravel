@@ -22,7 +22,7 @@
                     </div>
                     <!-- Contenu d'une expérience -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -39,7 +39,7 @@
                     </div>
                     <!-- Contenu d'une expérience -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -56,7 +56,7 @@
                     </div>
                     <!-- Contenu d'une expérience -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -77,7 +77,7 @@
                     <h2 class="text-secondary fw-bolder mb-4">Cursus Scolaire</h2>
                     <!-- Contenu d'un cursus -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -96,7 +96,7 @@
                     </div>
                     <!-- Contenu d'un cursus -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -115,7 +115,7 @@
                     </div>
                     <!-- Contenu d'un cursus -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
@@ -134,7 +134,7 @@
                     </div>
                     <!-- Contenu d'un cursus -->
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">

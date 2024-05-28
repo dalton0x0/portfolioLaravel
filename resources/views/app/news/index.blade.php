@@ -11,11 +11,11 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div>
                                 <div class="d-flex align-items-center mb-4">
                                     <h3 class="fw-bolder mb-0">
-                                        <span class="text-gradient d-inline">C'est quoi la veille technologique ?</span>
+                                        <span class="text-gradient d-inline">C'est quoi cette veille ?</span>
                                     </h3>
                                 </div>
                                 <div class="text-justify">
@@ -51,13 +51,13 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div>
                                 <div class="d-flex align-items-center mb-4">
                                     <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
                                         @include('partials.icon', ['class' => 'bi-apple'])
                                     </div>
-                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Le Pass Navigo est maintenant dans vos IPhone</span></h3>
+                                    <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Pass Navigo = IPhone</span></h3>
                                 </div>
                                 <div class="text-justify">
                                     <p>
@@ -112,7 +112,7 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <!-- Listes des ressources -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">

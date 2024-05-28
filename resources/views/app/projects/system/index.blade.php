@@ -18,7 +18,7 @@
                     </div>
                     <!-- Contexte -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col">
                                     <div class="d-flex align-items-center mb-4">
@@ -27,7 +27,7 @@
                                         </div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Contexte</span></h3>
                                     </div>
-                                    <p>
+                                    <p class="text-justify">
                                         Dans le cadre d'un projet visant à améliorer la gestion et la surveillance du parc informatique de la Maison des
                                         Ligues (M2L), il a été demandé aux administrateurs d'installer un système d’inventoring et de supervision
                                         adéquat. Cette solution devrait permettre aux administrateurs de surveiller l'état, les performances et la disponibilité
@@ -39,7 +39,7 @@
                     </div>
                     <!-- Topologie -->
                     <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col">
                                     <div class="d-flex align-items-center mb-4">
@@ -55,7 +55,7 @@
                     </div>
                     <!-- Ressources -->
                     <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <!-- Listes des ressources -->
                             <div class="mb-0">
                                 <div class="d-flex align-items-center mb-4">

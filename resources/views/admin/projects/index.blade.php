@@ -52,7 +52,6 @@
             @endforeach
             </tbody>
         </table>
-        <hr>
         {{ $projects->links() }}
     </div>
 @endsection
