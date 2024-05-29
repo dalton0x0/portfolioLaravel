@@ -5,9 +5,9 @@
                 @include('partials.flash')
                 <div class="text-center my-5">
                     <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Chéridanh</span></h2>
-                    <p class="lead fw-light mb-4">Administrateur Système & Réseau Junior</p>
+                    <p class="lead fw-light mb-4">Administrateur Système & Réseau</p>
                     <p class="text-muted">
-                        Etudiant en 2e année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et
+                        Etudiant en 2<sup>e</sup> année de BTS SIO option SISR (Solutions d'Infrastructures Systèmes et
                         Réseaux) à l'école ITIC Paris,
                         j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement
                         d'application web.

@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>2e année BTS SIO option SISR</div>
+                                    <div>2<sup>e</sup> année BTS SIO option SISR</div>
                                 </div>
                             </div>
                         </div>

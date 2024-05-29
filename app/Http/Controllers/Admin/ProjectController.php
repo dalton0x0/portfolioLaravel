@@ -83,20 +83,16 @@ class ProjectController extends Controller
                 Storage::disk('public')->delete($project->cover);
             }
             $data['cover'] = $request->file('cover')->store('covers', 'public');
-        } else {
-            if ($project->exists) {
-                $data['cover'] = $project->cover;
-            }
+        } elseif ($project->exists) {
+            $data['cover'] = $project->cover;
         }
         if ($request->hasFile('report') && $request->file('report')->isValid()) {
             if ($project->exists && $project->report) {
                 Storage::disk('public')->delete($project->report);
             }
             $data['report'] = $request->file('report')->store('reports', 'public');
-        } else {
-            if ($project->exists) {
-                $data['report'] = $project->report;
-            }
+        } elseif ($project->exists) {
+            $data['report'] = $project->report;
         }
         return $data;
     }
