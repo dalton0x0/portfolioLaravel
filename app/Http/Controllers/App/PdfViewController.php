@@ -40,13 +40,10 @@ class PdfViewController extends Controller
     public function viewSheetNetwork () {
         return response()->file(realpath(public_path("storage/pdf/network/fiche-projet-reseau.pdf")));
     }
-    public function viewApNetwork () {
+    public function viewConfigAp () {
         return response()->file(realpath(public_path("storage/pdf/network/ap.pdf")));
     }
-    public function viewMultipleSsidNetwork () {
-        return response()->file(realpath(public_path("storage/pdf/network/multiple-ssid.pdf")));
-    }
-    public function viewStationNetwork () {
-        return response()->file(realpath(public_path("storage/pdf/network/station.pdf")));
+    public function viewConfigSwitch () {
+        return response()->file(realpath(public_path("storage/pdf/network/switch.pdf")));
     }
 }

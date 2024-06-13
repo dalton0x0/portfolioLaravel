@@ -71,20 +71,13 @@
                                         </a>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.ap') }}" target="_blank">
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.config-ap') }}" target="_blank">
                                             Partie A : Access Point
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.multiple-ssid') }}" target="_blank">
-                                            Partie B : AP multiple SSID
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row row-cols-1 row-cols-md-3">
-                                    <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.station') }}" target="_blank">
-                                            Partie C : Station Wifi
+                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.network.config-switch') }}" target="_blank">
+                                            Partie B : Switch (VLANs)
                                         </a>
                                     </div>
                                 </div>
