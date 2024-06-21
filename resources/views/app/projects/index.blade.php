@@ -14,14 +14,14 @@
                     <div class="row">
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
-                            'cover' => 'system/cover-system.png',
+                            'cover' => 'projects/cover-system.png',
                             'title' => 'Système',
                             'path' => 'system.index',
                             'category' => 'Linux'
                         ])
                         @include('partials.card', [
                             'class' => 'col-md-6 mb-3' ,
-                            'cover' => 'network/cover-network.png',
+                            'cover' => 'projects/cover-network.png',
                             'title' => 'Réseau',
                             'path' => 'network.index',
                             'category' => 'MikroTik'

@@ -48,7 +48,7 @@
                                         </div>
                                         <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Topologie</span></h3>
                                     </div>
-                                    <img class="img-fluid p-2" src="{{ asset('storage/img/system/topologie-systeme.png') }}" alt="topologie"/>
+                                    <img class="img-fluid p-2" src="{{ asset('assets/img/projects/topologie-systeme.png') }}" alt="topologie"/>
                                 </div>
                             </div>
                         </div>

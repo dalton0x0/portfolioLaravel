@@ -11,7 +11,7 @@
 
 <div class="{{ $class }}">
     <div class="card shadow rounded-4 h-100">
-        <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/' . $cover ) }}" alt="{{ $title }}"/>
+        <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/' . $cover ) }}" alt="{{ $title }}"/>
         <div class="card-body">
             <h4 class="card-title">{!! $title !!}</h4>
             <p class="card-text text-justify">{{ $description }}</p>
