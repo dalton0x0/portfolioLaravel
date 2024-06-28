@@ -23,10 +23,14 @@ class DatabaseSeeder extends Seeder
              'email' => 'admin-portfolio@cheridanh.cg',
              'password' => 'Kethur@1122-Admin',
          ]);
-         $category = Category::factory(3)->create();
-         $period = Period::factory(3)->create();
+         $categories = Category::factory(3)->create();
+         $periods = Period::factory(3)->create();
          Project::factory(50)
-             ->hasAttached($period->random(1), $category->random(1))
-             ->create();
+             ->create()
+             ->each(function ($project) use ($categories, $periods) {
+                 $project->category()->associate($categories->random());
+                 $project->period()->associate($periods->random());
+                 $project->save();
+             });
     }
 }

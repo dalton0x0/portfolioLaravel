@@ -24,7 +24,6 @@ class ProjectFormRequest extends FormRequest
             'title' => 'required',
             'slug' => 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
             'cover' => 'image|mimes:jpeg,png,jpg,svg|max:5120',
-            'description' => 'required',
             'category_id' => 'required|exists:categories,id',
             'period_id' => 'required|exists:periods,id',
         ];
@@ -46,7 +45,6 @@ class ProjectFormRequest extends FormRequest
             'cover.image' => "Le fichier sélectionné n'est pas une image.",
             'cover.max' => "La taille de l'image est trop grande.",
             'cover.mimes' => "Le fichier sélectionné doit être en format : jpeg, jpg, bmp, png.",
-            'description.required' => 'Une description est requise.',
             'report.required' => "Un compte rendu est requis.",
             'report.mimes' => "Le fichier choisi n'est pas un fichier PDF.",
             'category_id.required' => 'Une catégorie est requise.',

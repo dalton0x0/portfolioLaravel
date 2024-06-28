@@ -17,7 +17,6 @@
                         @csrf
                         @method($project->exists ? 'put' : 'post')
                         @include('partials.input', ['name' => 'title', 'label' => 'Titre', 'value' => $project->title, 'placeholder' => 'Titre'])
-                        @include('partials.input', ['type' => 'textarea', 'name' => 'description', 'label' => 'Description', 'value' => $project->description, 'placeholder' => 'Description'])
                         <div class="row">
                             <div class="col-md-6">
                                 @include('partials.upload', ['name' => 'report', 'label' => 'Compte rendu'])

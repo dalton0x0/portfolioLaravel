@@ -12,13 +12,6 @@ class AuthController extends Controller
 {
     public function login()
     {
-        /*
-        User::create([
-            'name' => 'admin-portfolio',
-            'email' => 'admin-portfolio@cheridanh.cg',
-            'password' => Hash::make('Kethur@1122-Admin')
-        ]);
-        */
         return view('admin.home.login');
     }
     public function doLogin(AuthFormRequest $request)
