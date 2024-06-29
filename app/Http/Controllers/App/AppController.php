@@ -45,7 +45,7 @@ class AppController extends Controller
     }
     public function formation()
     {
-        $period = Period::where('name', 'like', 'possimus')->firstOrFail();
+        $period = Period::where('name', 'like', 'Formation')->firstOrFail();
         $projects = Project::where('period_id', $period->id)
             ->with('category')
             ->get()
