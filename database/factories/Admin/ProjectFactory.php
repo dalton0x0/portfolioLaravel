@@ -16,13 +16,13 @@ class ProjectFactory extends Factory
      */
     public function definition(): array
     {
-        $pdf = public_path("assets/img/");
-        $image = public_path("storage/pdf/cheridanh/");
+        $pdf = glob(realpath(asset('storage/pdf/cheridanh/*.*')));
+        $image = glob(realpath(asset('assets/img/*.*')));
         return [
             'title' => $this->faker->sentence(6, true),
             'slug' => $this->faker->slug(),
-            'report' => $this->faker->filePath($pdf),
-            'cover' => $this->faker->filePath($image),
+            'report' => $this->faker->randomElement($pdf),
+            'cover' => $this->faker->randomElement($image),
         ];
     }
 }

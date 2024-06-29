@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
          ]);
          $categories = Category::factory(3)->create();
          $periods = Period::factory(3)->create();
-         Project::factory(50)
-             ->create()
+         Project::factory(20)
+             ->make()
              ->each(function ($project) use ($categories, $periods) {
                  $project->category()->associate($categories->random());
                  $project->period()->associate($periods->random());
