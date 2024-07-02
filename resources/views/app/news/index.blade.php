@@ -89,17 +89,17 @@
                     <div class="row">
                         <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
-                                <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/iphone-navigo-1.png') }}" alt="Navigo"/>
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/news/iphone-navigo-1.png') }}" alt="Navigo"/>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
-                                <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/iphone-navigo-2.png') }}" alt="Navigo"/>
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/news/iphone-navigo-2.png') }}" alt="Navigo"/>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="card shadow rounded-4">
-                                <img class="img-fluid p-2 w-100" src="{{ asset('storage/img/news/iphone-navigo-3.png') }}" alt="Navigo"/>
+                                <img class="img-fluid p-2 w-100" src="{{ asset('assets/img/news/iphone-navigo-3.png') }}" alt="Navigo"/>
                             </div>
                         </div>
                     </div>
