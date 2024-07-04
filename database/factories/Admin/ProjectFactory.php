@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
         $pdf = glob(realpath(asset('storage/pdf/cheridanh/*.*')));
         $image = glob(realpath(asset('assets/img/*.*')));
         return [
-            'title' => $this->faker->sentence(6, true),
+            'title' => $this->faker->sentence(3, false),
             'slug' => $this->faker->slug(),
             'report' => $this->faker->randomElement($pdf),
             'cover' => $this->faker->randomElement($image),
