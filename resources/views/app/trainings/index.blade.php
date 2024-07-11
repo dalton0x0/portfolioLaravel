@@ -81,6 +81,24 @@
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                     <div class="bg-light p-4 rounded-4">
+                                        <div class="text-secondary fw-bolder mb-2">2024 - 2025</div>
+                                        <div class="mb-2">
+                                            <div class="small fw-bolder">ITIC Paris</div>
+                                            <div class="small text-muted">Paris, France</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>Bachelor AIS : Administration des Infrastructures Sécurisées</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
                                         <div class="text-secondary fw-bolder mb-2">2023 - 2024</div>
                                         <div class="mb-2">
                                             <div class="small fw-bolder">ITIC Paris</div>
@@ -89,7 +107,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>2<sup>e</sup> année BTS SIO option SISR</div>
+                                    <div>BTS SIO : Services Informatique aux Organisations (option Réseau : SISR)</div>
                                 </div>
                             </div>
                         </div>
