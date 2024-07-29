@@ -13,21 +13,21 @@
                     </p>
                     <h5 class="display-5 fw-bolder pt-3"><span class="text-gradient d-inline">Certifications</span></h5>
                     <div class="p-2">
-                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/cnil.png' ) }}" width="125" alt="CNIL"/>
-                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/rgpd-logo.png' ) }}" width="125" alt="RGPD"/>
+                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/cnil.png') }}" width="125" alt="CNIL"/>
+                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/rgpd-logo.png') }}" width="125" alt="RGPD"/>
                     </div>
                     <div class="p-2">
-                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/mikrotik-mtcna.png' ) }}" width="125" alt="MTCNA"/>
+                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/mikrotik-mtcna.png') }}" width="125" alt="MTCNA"/>
                     </div>
                     <div class="p-2">
-                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/introduction-to-cybersecurity.png' ) }}" width="125" alt="CiC"/>
-                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/cybersecurity-essentials.png' ) }}" width="125" alt="CCE"/>
+                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/introduction-to-cybersecurity.png') }}" width="125" alt="CiC"/>
+                        <img class="img-fluid p-2" src="{{ asset('assets/img/certifs/cybersecurity-essentials.png') }}" width="125" alt="CCE"/>
                     </div>
                     <div class="d-flex justify-content-center fs-2 gap-4 pt-3">
-                        <a class="text-gradient" target="_blank" href="https://www.snapchat.com/add/ch.dalton?share_id=cuW6mTJ_SSuV2bDhgEZ8SA&locale=fr_FR">
+                        <a class="text-gradient" target="_blank" href="https://snapchat.com/add/ch.dalton?share_id=cuW6mTJ_SSuV2bDhgEZ8SA&locale=fr_FR">
                             @include('partials.icon', ['class' => 'bi-snapchat'])
                         </a>
-                        <a class="text-gradient" target="_blank" href="https://www.linkedin.com/in/cheridanhtsiela">
+                        <a class="text-gradient" target="_blank" href="https://linkedin.com/in/cheridanhtsiela">
                             @include('partials.icon', ['class' => 'bi-linkedin'])
                         </a>
                         <a class="text-gradient" target="_blank" href="https://github.com/cheridanh">

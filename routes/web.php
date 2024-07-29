@@ -73,5 +73,6 @@ Route::get('/trainings/cv', [PdfViewController::class, 'viewCv'])->name('viewCv'
 Route::get('/skills', [AppController::class, 'skills'])->name('skills');
 Route::get('/skills/summary', [PdfViewController::class, 'viewSummary'])->name('viewSummary');
 Route::get('/news', [AppController::class, 'news'])->name('news');
-Route::get('/about-contact', [AppController::class, 'about'])->name('about-contact');
-Route::post('/contact', [AppController::class, 'contact'])->name('contact');
+Route::get('/about', [AppController::class, 'about'])->name('about');
+Route::get('/contact', [AppController::class, 'contact'])->name('contact');
+Route::post('/contactForm', [AppController::class, 'contactForm'])->name('contactForm');

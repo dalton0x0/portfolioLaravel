@@ -71,11 +71,15 @@ class AppController extends Controller
     {
         return view('app.about.index');
     }
+    public function contact ()
+    {
+        return view('app.contact.index');
+    }
     public function show(string $period, string $category, Project $project)
     {
         return response()->file(public_path("storage/").$project->report);
     }
-    public function contact (ContactFormRequest $request)
+    public function contactForm (ContactFormRequest $request)
     {
         $contact = $request->all();
         Mail::to($request->email)->send(new ContactSendMail($request->validated()));

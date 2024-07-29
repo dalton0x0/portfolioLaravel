@@ -24,7 +24,10 @@
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'news')]) href="{{ route('news') }}">Veille Technologique</a>
                     </li>
                     <li class="nav-item">
-                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('about-contact') }}">À propos & Contact</a>
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'about')]) href="{{ route('about') }}">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a @class(['nav-link', 'active text-primary' => str_contains($route, 'contact')]) href="{{ route('contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a @class(['nav-link', 'active text-primary' => str_contains($route, 'login')]) href="{{ route('admin.index') }}" target="_blank">Se connecter</a>
