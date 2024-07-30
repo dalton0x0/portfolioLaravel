@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 p-2">
-                                <img class="img-fluid rounded-circle p-2" width="140" height="140" src="{{ asset('assets/img/great/christ.jpe') }}" alt="Christ"/>
+                                <img class="img-fluid rounded-circle p-2" width="140" height="140" src="{{ asset('assets/img/great/christ.jpeg') }}" alt="Christ"/>
                                 <h2 class="fw-normal pt-1">Christ AZIKA-EROS</h2>
                                 <p>Digital Transformation & Marketing specialist | Certified Google & Social Ads</p>
                                 <div class="d-flex justify-content-center fs-2 gap-4 pt-1">
