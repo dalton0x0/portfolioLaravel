@@ -80,8 +80,10 @@
                             </div>
                         </div>
                         <div>
-                            <img class="img-fluid p-2 mb-2" src="{{ asset('assets/img/great/nuxell-technologies.png') }}" width="150" alt="Nuxell Technologies"/>
-                            <img class="img-fluid p-2" src="{{ asset('assets/img/great/itic-paris.png') }}" width="200" alt="ITIC Paris"/>
+                            <img class="img-fluid p-2 m-1" src="{{ asset('assets/img/great/nuxell-technologies.png') }}" width="150" alt="Nuxell Technologies"/>
+                            <a href="https://iticparis.com" target="_blank">
+                                <img class="img-fluid p-2 m-1" src="{{ asset('assets/img/great/itic-paris.png') }}" width="200" alt="ITIC Paris"/>
+                            </a>
                         </div>
                     </div>
                 </div>
