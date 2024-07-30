@@ -8,6 +8,7 @@
             <!-- Formulaire de contact -->
             <div class="bg-light rounded-4 pb-5 px-4 px-md-5">
                 <div class="text-center mb-5">
+                    @include('partials.flash')
                     <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3">
                         <a href="mailto:contact@cheridanh.cg">@include('partials.icon', ['class' => 'bi-envelope text-white'])</a>
                     </div>
