@@ -120,19 +120,28 @@
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="https://tldr.tech/" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             TLDR
-                                        </a>
+                                            <a class="btn" href="https://tldr.tech/" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="https://feedly.com/" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Feedly
-                                        </a>
+                                            <a class="btn" href="https://feedly.com/" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="https://www.youtube.com/" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             YouTube
-                                        </a>
+                                            <a class="btn" href="https://youtube.com/" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

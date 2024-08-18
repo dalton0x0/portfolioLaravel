@@ -66,36 +66,54 @@
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3 mb-4">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.sheet') }}" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Fiche projet système
-                                        </a>
+                                            <a class="btn" href="{{ route('projects.system.sheet') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.samba') }}" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Partie A : SAMBA AD
-                                        </a>
+                                            <a class="btn" href="{{ route('projects.system.samba') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi') }}" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Partie B : GLPI
-                                        </a>
+                                            <a class="btn" href="{{ route('projects.system.glpi') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row row-cols-1 row-cols-md-3">
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix') }}" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Partie C : ZABBIX
-                                        </a>
+                                            <a class="btn" href="{{ route('projects.system.zabbix') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col mb-4 mb-md-0">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.glpi-agent') }}" target="_blank">
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
                                             Partie D : Agent GLPI
-                                        </a>
+                                            <a class="btn" href="{{ route('projects.system.glpi-agent') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="col">
-                                        <a class="btn d-flex align-items-center bg-light rounded-4 p-3 h-100" href="{{ route('projects.system.zabbix-agent') }}" target="_blank">
-                                            Partie E : Agent ZABBIX
-                                        </a>
+                                        <div class="d-flex align-items-center justify-content-between bg-light rounded-4 p-3 h-100">
+                                            Partie C : Agent ZABBIX
+                                            <a class="btn" href="{{ route('projects.system.zabbix-agent') }}" target="_blank">
+                                                @include('partials.icon', ['class' => 'bi-box-arrow-up-right'])
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
