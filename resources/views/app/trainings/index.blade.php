@@ -35,6 +35,15 @@
                                     <div>Administrateur Système & Réseau Junior</div>
                                 </div>
                             </div>
+                            <div class="pt-4">
+                                <h6>Missions :</h6>
+                                <ul class="pt-3">
+                                    <li class="pb-2">Assistance aux collaborateurs, profs et étudiants à la connexion aux services de l'entreprise</li>
+                                    <li class="pb-2">Maintenance et assistance du parc informatique de l'entreprise</li>
+                                    <li class="pb-2">Participer à l'évolution technique des services de l'entreprise</li>
+                                    <li>Veille technologique liées aux services existants</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- Contenu d'une expérience -->
@@ -49,7 +58,22 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>Technicien Système & Réseau</div>
+                                    <div>Technicien Support Informatique</div>
+                                </div>
+                                <div class="pt-4">
+                                    <h6>Missions :</h6>
+                                    <ul class="pt-3">
+                                        <li class="pb-2">Assistance des utilisateurs</li>
+                                        <li class="pb-2">Inventaire du matériel informatique</li>
+                                        <li class="pb-2">Câblages</li>
+                                        <li class="pb-2">Test de charges</li>
+                                        <li class="pb-2">Réponses aux incidents (tickets)</li>
+                                        <li class="pb-2">Installation et virtualisation des serveurs</li>
+                                        <li class="pb-2">Mise en place d’un serveur PXE sur MikroTik</li>
+                                        <li class="pb-2">Mise en place des VPN (IPsec sur Pfsense et Eoip sur MikroTik)</li>
+                                        <li class="pb-2">Inventaire avec OCS Inventory et GLPI</li>
+                                        <li>Installation ZABBIX</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +90,16 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>Technicien Support Informatique</div>
+                                    <div>Technicien Système & Réseau</div>
+                                </div>
+                                <div class="pt-4">
+                                    <h6>Missions :</h6>
+                                    <ul class="pt-3">
+                                        <li class="pb-2">Gestion des utilisateurs avec Active Directory</li>
+                                        <li class="pb-2">Mise en place des VPN</li>
+                                        <li class="pb-2">Mise en place d’un portail captive</li>
+                                        <li>Centralisation des logs Windows & Linux sur Debian avec RSyslog et LogAnalyzer</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +165,7 @@
                         </div>
                     </div>
                     <!-- Contenu d'un cursus -->
-                    <div class="card shadow border-0 rounded-4 mb-5">
+                    <div class="card shadow border-0 rounded-4">
                         <div class="card-body p-4">
                             <div class="row align-items-center gx-5">
                                 <div class="col text-center text-lg-start mb-4 mb-lg-0">
@@ -145,26 +178,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>Baccalauréat Général</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Contenu d'un cursus -->
-                    <div class="card shadow border-0 rounded-4">
-                        <div class="card-body p-4">
-                            <div class="row align-items-center gx-5">
-                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                    <div class="bg-light p-4 rounded-4">
-                                        <div class="text-secondary fw-bolder mb-2">2014 - 2015</div>
-                                        <div class="mb-2">
-                                            <div class="small fw-bolder">Centre Scolaire Allegra</div>
-                                            <div class="small text-muted">Brazzaville, Congo</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div>Brevet d'Etude du Premier Cycle</div>
+                                    <div>Baccalauréat Scientifique (Biologie)</div>
                                 </div>
                             </div>
                         </div>
