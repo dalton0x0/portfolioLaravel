@@ -11,10 +11,10 @@
         <!-- Experiences & Cursus -->
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-11 col-xl-9 col-xxl-8">
-                <!-- Experiences Professionnels  -->
+                <!-- Experiences Professionnelless  -->
                 <section>
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h2 class="text-primary fw-bolder mb-0">Experiences Professionnels</h2>
+                        <h2 class="text-primary fw-bolder mb-0">Experiences Professionnelles</h2>
                         <!-- Mon CV -->
                         <a class="btn btn-primary px-4 py-3 rounded-4" href="{{ route('viewCv') }}" target="_blank">
                             @include('partials.icon', ['class' => 'd-inline-block bi-eye']) CV
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div>Administrateur Système & Réseau Junior</div>
+                                    <div>Administrateur Système & Réseau</div>
                                 </div>
                             </div>
                             <div class="pt-4">
@@ -99,6 +99,33 @@
                                         <li class="pb-2">Mise en place des VPN</li>
                                         <li class="pb-2">Mise en place d’un portail captive</li>
                                         <li>Centralisation des logs Windows & Linux sur Debian avec RSyslog et LogAnalyzer</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenu d'une expérience -->
+                    <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center gx-5">
+                                <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                    <div class="bg-light p-4 rounded-4">
+                                        <div class="text-primary fw-bolder mb-2">Septembre 2021 - Novembre 2022</div>
+                                        <div class="small fw-bolder">Stage</div>
+                                        <div class="small text-muted">DigiBOX, Brazzaville</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>Technicien Système & Réseau</div>
+                                </div>
+                                <div class="pt-4">
+                                    <h6>Missions :</h6>
+                                    <ul class="pt-3">
+                                        <li class="pb-2">Assurer la maintenance du parc informatique</li>
+                                        <li class="pb-2">Installer et configurer les postes de travail des utilisateurs</li>
+                                        <li class="pb-2">Guider et résoudre le dysfonctionnement des postes des utilisateurs</li>
+                                        <li class="pb-2">Prendre le contrôle du système à distance</li>
+                                        <li class="pb-2">Installer les configurations standard sur les nouveaux équipements</li>
                                     </ul>
                                 </div>
                             </div>
