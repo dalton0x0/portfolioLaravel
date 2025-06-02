@@ -5,11 +5,15 @@
                 @include('partials.flash')
                 <div class="text-center my-5">
                     <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Chéridanh</span></h2>
-                    <p class="lead fw-light mb-4">Administrateur Système & Réseau</p>
+                    <p class="lead fw-light">Administrateur Système & Réseau</p>
+                    <p class="lead fw-light mb-4">Développeur Full Stack</p>
                     <p class="text-muted">
-                        Etudiant en <b>Bachelor Administration des Infrastructures Sécurisées (AIS)</b> à l'école ITIC Paris,
-                        j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement
-                        d'application web.
+                        Etudiant en <br>
+                        <b>Bachelor Concepteur Développeur d'Application (CDA)</b> <br>
+                        et en <br>
+                        <b>Bachelor Administration des Infrastructures Sécurisées (AIS)</b> <br>
+                        à l'école ITIC Paris, j'ai une passion pour les réseaux, les systèmes informatiques et aussi le developpement
+                        d'application web et mobile.
                     </p>
                     <h5 class="display-5 fw-bolder pt-3"><span class="text-gradient d-inline">Certifications</span></h5>
                     <div class="p-2">
@@ -30,7 +34,7 @@
                         <a class="text-gradient" target="_blank" href="https://linkedin.com/in/cheridanhtsiela">
                             @include('partials.icon', ['class' => 'bi-linkedin'])
                         </a>
-                        <a class="text-gradient" target="_blank" href="https://github.com/cheridanh">
+                        <a class="text-gradient" target="_blank" href="https://github.com/dalton0x0">
                             @include('partials.icon', ['class' => 'bi-github'])
                         </a>
                     </div>
