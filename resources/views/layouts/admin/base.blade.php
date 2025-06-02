@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
     <!-- Bootstrap icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- style -->
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/styles.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
@@ -37,10 +37,8 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS -->
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     <script>new TomSelect('#categorie', {plugins: {remove_button: {title: 'Supprimer'}}})</script>
 </body>
 </html>
